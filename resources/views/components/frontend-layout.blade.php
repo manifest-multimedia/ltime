@@ -134,7 +134,7 @@
                             </nav>
                         </div>
                         <div class="btn-box">
-                            <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
+                            <a href="#" class="theme-btn btn-one"><span>+</span>Become an Affiliate</a>
                         </div>
                     </div>
                 </div>

@@ -43,7 +43,7 @@
                     <div class="tabs-box">
                         <div class="tab-btn-box">
                             <ul class="tab-btns tab-buttons centred clearfix">
-                                <li class="tab-btn active-btn" data-tab="#tab-1">Buy Land</li>
+                                <li class="tab-btn active-btn" data-tab="#tab-1">Land</li>
                                 <li class="tab-btn" data-tab="#tab-2">Real Estate</li>
                             </ul>
                         </div>
@@ -58,7 +58,7 @@
                                                         <label>Search Property</label>
                                                         <div class="field-input">
                                                             <i class="fas fa-search"></i>
-                                                            <input type="search" name="search-field" placeholder="Search by Property, Location or Landmark..." required="">
+                                                            <input type="search" name="search-field" placeholder="Search by Location or Landmark..." required="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -68,11 +68,10 @@
                                                         <div class="select-box">
                                                             <i class="far fa-compass"></i>
                                                             <select class="wide">
-                                                               <option data-display="Input location">Input location</option>
-                                                               <option value="1">New York</option>
-                                                               <option value="2">California</option>
-                                                               <option value="3">London</option>
-                                                               <option value="4">Maxico</option>
+                                                               <option data-display="Input location">Select location</option>
+                                                                @foreach ($locations as $item)
+                                                                        <option value="{{$item->name}}">{{$item->name}}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
                                                     </div>
@@ -267,7 +266,7 @@
                                     <div class="switch_btn_one ">
                                         <button class="nav-btn nav-toggler navSidebar-button clearfix search__toggler">View Properties<i class="fas fa-briefcase"></i></button>
                                         
-                                        <div class="advanced-search">
+                                        {{-- <div class="advanced-search">
                                             <div class="close-btn">
                                                 <a href="#" class="close-side-widget"><i class="far fa-times"></i></a>
                                             </div>
@@ -379,7 +378,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
