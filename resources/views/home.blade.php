@@ -515,7 +515,7 @@
 
 
     <!-- cta-section -->
-    <section class="cta-section alternate-2 centred" style="background-image: url(assets/images/background/cta-1.jpg);">
+    <section class="cta-section alternate-2 centred" style="background-image: url({{asset('assets/images/banner/banner-1920x505.jpg')}});">
         <div class="auto-container">
             <div class="inner-box clearfix">
                 <div class="text">
@@ -846,7 +846,7 @@
 
 
     <!-- testimonial-style-two -->
-    <section class="testimonial-style-two" style="background-image: url(assets/images/background/testimonial-1.jpg);">
+    <section class="testimonial-style-two" style="background-image: url({{asset('assets/images/banner/banner-1920x645.jpg')}});">
         <div class="auto-container">
             <div class="row clearfix">
                 <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 inner-column">
@@ -926,8 +926,8 @@
                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                     <div class="image_block_1">
                         <div class="image-box">
-                            <figure class="image image-1 paroller"><img src="assets/images/resource/place-5.jpg" alt=""></figure>
-                            <figure class="image image-2 paroller-2"><img src="assets/images/resource/place-6.jpg" alt=""></figure>
+                            <figure class="image image-1 paroller"><img src="{{asset("assets/images/banner/banner-440x570.jpg")}}" alt="banner440x570"></figure>
+                            <figure class="image image-2 paroller-2"><img src="{{asset("assets/images/banner/banner-270x320.jpg")}}" alt="banner270x320"></figure>
                         </div>
                     </div>
                 </div>

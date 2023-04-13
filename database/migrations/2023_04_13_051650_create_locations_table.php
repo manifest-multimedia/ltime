@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('country')->nullable();
             $table->string('region')->nullable();
             $table->string('status')->nullable();
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }
