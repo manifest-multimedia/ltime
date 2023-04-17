@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('squareft')->nullable(); 
             $table->float('price')->nullable(); 
             $table->string('featured-image')->nullable(); 
+            $table->string('type')->nullable();
             $table->string('cover-image')->nullable();
         });
     }

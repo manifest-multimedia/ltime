@@ -399,43 +399,45 @@
                 <h2>Featured Property</h2>
             </div>
             <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
-                <div class="feature-block-one">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><img src="assets/images/feature/feature-1.jpg" alt=""></figure>
-                            <div class="batch"><i class="icon-11"></i></div>
-                            <span class="category">Featured</span>
-                        </div>
-                        <div class="lower-content">
-                            <div class="author-info clearfix">
-                                <div class="author pull-left">
-                                    <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
-                                    <h6>Michael Bean</h6>
-                                </div>
-                                <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
+               @foreach ($properties as $item)
+                    <div class="feature-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure class="image"><img src="assets/images/feature/feature-1.jpg" alt=""></figure>
+                                <div class="batch"><i class="icon-11"></i></div>
+                                <span class="category">Featured</span>
                             </div>
-                            <div class="title-text"><h4><a href="agents-details.html">Villa on Grand Avenue</a></h4></div>
-                            <div class="price-box clearfix">
-                                <div class="price-info pull-left">
-                                    <h6>Start From</h6>
-                                    <h4>$30,000.00</h4>
+                            <div class="lower-content">
+                                {{-- <div class="author-info clearfix">
+                                    <div class="author pull-left">
+                                        <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
+                                        <h6>Michael Bean</h6>
+                                    </div>
+                                    <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
+                                </div> --}}
+                                <div class="title-text mt-3"><h4><a href="#">{{$item->title}}</a></h4></div>
+                                <div class="price-box clearfix">
+                                    <div class="price-info pull-left">
+                                        <h6>Start From</h6>
+                                        <h4>{{$system_currency}}{{$item->price}}</h4>
+                                    </div>
+                                    {{-- <ul class="other-option pull-right clearfix">
+                                        <li><a href="#compare"><i class="icon-12"></i></a></li>
+                                        <li><a href="#favorite"><i class="icon-13"></i></a></li>
+                                    </ul> --}}
                                 </div>
-                                <ul class="other-option pull-right clearfix">
-                                    <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                                    <li><a href="property-details.html"><i class="icon-13"></i></a></li>
+                                <p>{{$item->description}}</p>
+                                <ul class="more-details clearfix">
+                                    <li><i class="icon-14"></i>{{$item->beds}} Beds</li>
+                                    <li><i class="icon-15"></i>{{$item->baths}} Baths</li>
+                                    <li><i class="icon-16"></i>{{$item->squareft}} Sq Ft</li>
                                 </ul>
+                                <div class="btn-box"><a href="#" class="theme-btn btn-two">See Details</a></div>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
-                            <ul class="more-details clearfix">
-                                <li><i class="icon-14"></i>3 Beds</li>
-                                <li><i class="icon-15"></i>2 Baths</li>
-                                <li><i class="icon-16"></i>600 Sq Ft</li>
-                            </ul>
-                            <div class="btn-box"><a href="property-details.html" class="theme-btn btn-two">See Details</a></div>
                         </div>
                     </div>
-                </div>
-                <div class="feature-block-one">
+               @endforeach
+                {{-- <div class="feature-block-one">
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image"><img src="assets/images/feature/feature-2.jpg" alt=""></figure>
@@ -470,8 +472,8 @@
                             <div class="btn-box"><a href="property-details.html" class="theme-btn btn-two">See Details</a></div>
                         </div>
                     </div>
-                </div>
-                <div class="feature-block-one">
+                </div> --}}
+                {{-- <div class="feature-block-one">
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image"><img src="assets/images/feature/feature-3.jpg" alt=""></figure>
@@ -506,9 +508,9 @@
                             <div class="btn-box"><a href="property-details.html" class="theme-btn btn-two">See Details</a></div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
-            <div class="more-btn centred"><a href="property-list.html" class="theme-btn btn-one">View All Listing</a></div>
+            <div class="more-btn centred"><a href="#" class="theme-btn btn-one">View All Properties</a></div>
         </div>
     </section>
     <!-- feature-style-two end -->
@@ -519,11 +521,11 @@
         <div class="auto-container">
             <div class="inner-box clearfix">
                 <div class="text">
-                    <h2>Looking to Buy a New Property or <br />Sell an Existing One?</h2>
+                    <h2>Looking to develop a New Property?</h2>
                 </div>
                 <div class="btn-box">
-                    <a href="property-details.html" class="theme-btn btn-three">Rent Properties</a>
-                    <a href="index.html" class="theme-btn btn-one">Buy Properties</a>
+                    <a href="#" class="theme-btn btn-three">Build with Us</a>
+                    <a href="#" class="theme-btn btn-one">Buy Properties</a>
                 </div>
             </div>
         </div>
