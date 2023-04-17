@@ -110,6 +110,11 @@
 <script src="{{asset("assets/js/jquery.paroller.min.js")}}"></script>
 <script src="{{asset("assets/js/nav-tool.js")}}"></script>
 
+<!-- map script -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM_4EWUyvbxHuDXEowPuxPsbCF3J7mINI"></script>
+<script src="{{asset('assets/js/gmaps.js')}}"></script>
+<script src="{{asset('assets/js/map-helper.js')}}"></script>
+
 <!-- main-js -->
 <script src="{{asset("assets/js/script.js")}}"></script>
 

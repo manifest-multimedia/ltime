@@ -98,15 +98,16 @@
                 <div class="col-lg-6 col-md-12 col-sm-12 map-column">
                     <div class="google-map-area">
                         <div 
+                        
                             class="google-map" 
                             id="contact-google-map" 
-                            data-map-lat="40.712776" 
-                            data-map-lng="-74.005974" 
+                            data-map-lat="5.725874175726685" 
+                            data-map-lng="0.03254798932929893" 
                             data-icon-path="assets/images/icons/map-marker.png"  
-                            data-map-title="Brooklyn, New York, United Kingdom" 
+                            data-map-title="L-Time Properties (Main Office)" 
                             data-map-zoom="12" 
                             data-markers='{
-                                "marker-1": [40.712776, -74.005974, "<h4>Branch Office</h4><p>77/99 New York</p>","assets/images/icons/map-marker.png"]
+                                "marker-1": [5.725874175726685, 0.03254798932929893, "<h4>L-Time Properties (Main Office)</h4><p>Ghana</p>","assets/images/icons/map-marker.png"]
                             }'>
 
                         </div>
