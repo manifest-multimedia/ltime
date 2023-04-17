@@ -6,10 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "binshops/laravel-blog": "^9.3",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
+        "laravel/jetstream": "*",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.11"
     },
     "require-dev": {
         "deployer/deployer": "^7.3",

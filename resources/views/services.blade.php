@@ -1,3 +1,3 @@
-<x-frontend-layout title="L-time Properties | Services"> 
+<x-page-layout title="L-time Properties | Services"> 
 
-</x-frontend-layout>
+</x-page-layout>

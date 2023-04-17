@@ -8,28 +8,30 @@
     <nav class="main-menu navbar-expand-md navbar-light">
         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
             <ul class="navigation clearfix">
-                <li class="current"><a href="/"><span>Home</span></a>
+                <li class="{{ url()->current() === url('/') ? 'current' : ''}}"><a href="/"><span>Home</span></a>
                    
                 </li>
-                <li class=""><a href="/our-company"><span>Company</span></a>
+                <li class="{{ url()->current() === url('/our-company') ? 'current' : ''}}"><a href="/our-company"><span>Company</span></a>
                    
                 </li> 
-                <li class=""><a href="/our-services"><span>Services</span></a>
+                <li class="{{ url()->current() === url('/our-services') ? 'current' : ''}}"><a href="/our-services"><span>Services</span></a>
                     
                 </li>
-                <li class=""><a href="/our-projects"><span>Projects</span></a>
+                <li class="{{ url()->current() === url('/our-projects') ? 'current' : ''}}"><a href="/our-projects"><span>Projects</span></a>
                     
                 </li> 
                 
-                <li><a href="/contact-us"><span>Contact</span></a></li>   
+                <li class="{{ url()->current() === url('/contact-us') ? 'current' : ''}}"><a href="/contact-us"><span>Contact</span></a></li>   
             </ul>
         </div>
     </nav>
 </div>
 <div class="menu-right-content clearfix">
-    <div class="sign-box">
-        <a href="#register"><i class="fas fa-user"></i>Sign In</a>
-    </div>
+    @if (\Request::route()->getName()==="home")
+        <div class="sign-box">
+            <a href="#register"><i class="fas fa-user"></i>Sign In</a>
+        </div>
+    @endif
     <div class="btn-box">
         <a href="#affiliate" class="theme-btn btn-one"><span>+</span>Become an Affiliate</a>
     </div>
