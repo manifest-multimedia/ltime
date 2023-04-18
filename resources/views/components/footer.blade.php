@@ -33,19 +33,25 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget post-widget">
                         <div class="widget-title">
-                            <h3>Top News</h3>
+                            <h3>Insights</h3>
                         </div>
-                        <div class="post-inner">
+                        @foreach (\BinshopsBlog\Models\BinshopsPost::orderBy("posted_at","desc")->limit(2)->get() as $item)
+                        @php
+                            $post=\BinshopsBlog\Models\BinshopsPostTranslation::find($item->id);
+                        @endphp
                             <div class="post">
-                                <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/resource/footer-post-1.jpg" alt=""></a></figure>
-                                <h5><a href="blog-details.html">The Added Value Social Worker</a></h5>
-                                <p>Mar 25, 2020</p>
+                                <figure class="post-thumb"><a href="{{$post->url('en')}}"><img src="{{asset("blog_images/$post->image_large")}}" alt="{{$post->title}}"></a></figure>
+                                <h5><a href="{{$post->url('en')}}">{{$post->title}}</a></h5>
+                                {{-- <p>{{date($item->posted_at)}}</p> --}}
                             </div>
-                            <div class="post">
+                        @endforeach
+                        <div class="post-inner">
+                            
+                            {{-- <div class="post">
                                 <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/resource/footer-post-2.jpg" alt=""></a></figure>
                                 <h5><a href="blog-details.html">Ways to Increase Trust</a></h5>
                                 <p>Mar 24, 2020</p>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

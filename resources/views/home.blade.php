@@ -521,7 +521,7 @@
         <div class="auto-container">
             <div class="inner-box clearfix">
                 <div class="text">
-                    <h2>Looking to develop a New Property?</h2>
+                    <h2>Looking to Develop a New Property?</h2>
                 </div>
                 <div class="btn-box">
                     <a href="#" class="theme-btn btn-three">Build with Us</a>
@@ -989,84 +989,47 @@
                 {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmod tempor incididunt <br />labore dolore magna aliqua enim.</p> --}}
             </div>
             <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="#"><img src="assets/images/news/news-1.jpg" alt=""></a></figure>
-                                <span class="category">Insights</span>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#">The Benefits of Investing in Commercial Real Estate</a></h4>
-                                <ul class="post-info clearfix">
-                                    {{-- <li class="author-box">
-                                        <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>
-                                        <h5><a href="#">Insights</a></h5>
-                                    </li> --}}
-                                    <li>April 10, 2020</li>
-                                </ul>
-                                {{-- <div class="text">
-                                    <p>In this blog post, you could explore the advantages of investing in commercial real estate properties, such as office buildings, retail spaces, and industrial warehouses. You could discuss the potential for long-term rental income, tax benefits, and the potential for property appreciation. You could also provide tips for investors on how to identify lucrative commercial real estate opportunities and manage their properties effectively.</p>
-                                </div> --}}
-                                <div class="btn-box">
-                                    <a href="#" class="theme-btn btn-two">Read Full Article</a>
+                @foreach ($posts as $item)
+
+                @php
+                    // Get Post Info
+                    $post=\BinshopsBlog\Models\BinshopsPostTranslation::find($item->id);
+                @endphp
+                    <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                        <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <figure class="image"><a href="{{$post->url('en')}}"><img src="{{asset("blog_images/$post->image_large")}}" alt="{{$post->title}}"></a></figure>
+                                    <span class="category">Insights</span>
+                                </div>
+
+                               
+
+                                <div class="lower-content">
+                                    <h4><a href="{{$post->url('en')}}">{!!$post->title!!}</a></h4>
+                                    <ul class="post-info clearfix">
+                                        {{-- <li class="author-box">
+                                            <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>
+                                            <h5><a href="#">Insights</a></h5>
+                                        </li> --}}
+                                        <li>{{$item->posted_at}}</li>
+                                    </ul>
+                                    {{-- <div class="text">
+                                        <p>In this blog post, you could explore the advantages of investing in commercial real estate properties, such as office buildings, retail spaces, and industrial warehouses. You could discuss the potential for long-term rental income, tax benefits, and the potential for property appreciation. You could also provide tips for investors on how to identify lucrative commercial real estate opportunities and manage their properties effectively.</p>
+                                    </div> --}}
+                                    <div class="btn-box">
+                                        <a href="{{$post->url('en')}}" class="theme-btn btn-two">Read Full Article</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="#"><img src="assets/images/news/news-2.jpg" alt=""></a></figure>
-                                <span class="category">Insights</span>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#">How to Choose the Right Contractor for Your Construction Project</a></h4>
-                                <ul class="post-info clearfix">
-                                    {{-- <li class="author-box">
-                                        <figure class="author-thumb"><img src="assets/images/news/author-2.jpg" alt=""></figure>
-                                        <h5><a href="#"></a></h5>
-                                    </li> --}}
-                                    <li>April 09, 2020</li>
-                                </ul>
-                                {{-- <div class="text">
-                                    <p>In this blog post, you could provide tips for property owners and developers on how to choose the right contractor for their construction projects. You could discuss factors such as experience, reputation, pricing, and communication skills, and provide guidance on how to evaluate potential contractors. You could also provide tips for managing the construction process effectively and avoiding common pitfalls.</p>
-                                </div> --}}
-                                <div class="btn-box">
-                                    <a href="#" class="theme-btn btn-two">Read Full Article</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="#"><img src="assets/images/news/news-3.jpg" alt=""></a></figure>
-                                <span class="category">Insights</span>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#">The Future of Sustainable Design in Real Estate</a></h4>
-                                <ul class="post-info clearfix">
-                                    {{-- <li class="author-box">
-                                        <figure class="author-thumb"><img src="assets/images/news/author-3.jpg" alt=""></figure>
-                                        <h5><a href="#">Simon Baker</a></h5>
-                                    </li> --}}
-                                    <li>April 28, 2020</li>
-                                </ul>
-                                {{-- <div class="text">
-                                    <p>In this blog post, you could explore the growing trend of sustainable design in real estate and its potential impact on the industry. You could discuss the benefits of sustainable design, such as energy efficiency, reduced environmental impact, and improved health and wellness for occupants. You could also explore emerging trends in sustainable design, such as net-zero energy buildings, green roofs, and biophilic design, and provide examples of innovative sustainable real estate projects from around the world.</p>
-                                </div> --}}
-                                <div class="btn-box">
-                                    <a href="#" class="theme-btn btn-two">Read Full Article</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    
+                @endforeach
+
+                
+
+               
             </div>
         </div>
     </section>
