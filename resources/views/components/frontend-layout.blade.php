@@ -150,6 +150,6 @@
             <x-sitewide-cta />
         <!-- subscribe-section end -->
 
-        <!-- main-footer -->
-        <x-footer /> 
+    <!-- main-footer -->
+    <x-footer /> 
         

@@ -37,7 +37,7 @@
                 @if (\Request::route()->getName()==="dashboard")
                     {{ $slot }}
                 @endif
-                {!!$post->post_body_output()!!}
+             
             </main>
         </div>
 
