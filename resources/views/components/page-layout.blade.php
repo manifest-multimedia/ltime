@@ -1,4 +1,4 @@
-@props(['title'])
+@props(['title', 'pagetitle'])
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,9 +75,6 @@
         </div>
 
 
-        
-
-
         <!-- main header -->
         <header class="main-header">
             <!-- header-top -->
@@ -142,8 +139,10 @@
         <!-- Mobile Menu  -->
         <x-mobile-menu />
         <!-- End Mobile Menu -->
-
-
+        {{-- @dd($pagetitle) --}}
+        @if(isset($pagetitle))
+            <x-page-title :pagetitle="$pagetitle"/>
+        @endif
        {{$slot}}
 
 

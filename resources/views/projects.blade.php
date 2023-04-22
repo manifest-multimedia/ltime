@@ -1,4 +1,4 @@
-<x-page-layout title="L-time Properties | Our Projects"> 
+<x-page-layout title="L-time Properties | Our Projects" pagetitle="Projects"> 
      <!-- property-page-section -->
      <section class="property-page-section property-grid">
         <div class="auto-container">

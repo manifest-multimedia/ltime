@@ -143,7 +143,6 @@
 
         <x-mobile-menu />
 
-
        {{$slot}}
 
         <!-- subscribe-section -->

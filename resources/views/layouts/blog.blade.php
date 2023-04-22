@@ -1,18 +1,5 @@
-<x-page-layout title="L-Time Properties | Insights"> 
-    <!--Page Title-->
-    <section class="page-title centred" style="background-image: url(assets/images/background/page-title-5.jpg);">
-        <div class="auto-container">
-            <div class="content-box clearfix">
-                <h1>Insights</h1>
-                <ul class="bread-crumb clearfix">
-                    <li><a href="/">Home</a></li>
-                    <li>Insights</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--End Page Title-->
-
+<x-page-layout title="L-Time Properties | Insights" pagetitle="Insights"> 
+   
  <!-- sidebar-page-container -->
  <section class="sidebar-page-container blog-grid sec-pad-2">
     <div class="auto-container">

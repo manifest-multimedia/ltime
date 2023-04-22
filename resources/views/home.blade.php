@@ -742,9 +742,9 @@
                     <h5>Why Choose Us?</h5>
                     <h2>Reasons To Choose Us</h2>
                 </div>
-                <div class="btn-box">
+                {{-- <div class="btn-box">
                     <a href="categories.html" class="theme-btn btn-one">All Categories</a>
-                </div>
+                </div> --}}
             </div>
             <div class="lower-box">
                 <div class="row clearfix">
@@ -752,8 +752,8 @@
                         <div class="chooseus-block-one">
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-19"></i></div>
-                                <h4>Excellent Reputation</h4>
-                                <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                                <h4>Extensive Industry Experience</h4>
+                                <p> We have a team of experienced professionals who have been in the real estate and construction industry for many years. This experience has equipped us with the knowledge and expertise necessary to provide our customers with high-quality services, and to help them make informed decisions regarding their real estate and construction needs.</p>
                             </div>
                         </div>
                     </div>
@@ -761,8 +761,8 @@
                         <div class="chooseus-block-one">
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-26"></i></div>
-                                <h4>Best Local Agents</h4>
-                                <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                                <h4>Comprehensive Services</h4>
+                                <p>We offer a wide range of services, including land sales, real estate, construction works, consultancy, design, and surveying. This means that we are a one-stop-shop for all of our customers' real estate and construction needs, which saves them time, money, and hassle.</p>
                             </div>
                         </div>
                     </div>
@@ -770,8 +770,8 @@
                         <div class="chooseus-block-one">
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-21"></i></div>
-                                <h4>Personalized Service</h4>
-                                <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                                <h4>Customer Satisfaction</h4>
+                                <p>We are committed to providing our customers with excellent service and ensuring that they are completely satisfied with our work. We go above and beyond to meet our customers' needs and exceed their expectations, and we have a proven track record of success and customer satisfaction.</p>
                             </div>
                         </div>
                     </div>
@@ -850,57 +850,7 @@
     <!-- team-section end --> --}}
 
 
-    <!-- testimonial-style-two -->
-    <section class="testimonial-style-two" style="background-image: url({{asset('assets/images/banner/banner-1920x645.jpg')}});">
-        <div class="auto-container">
-            <div class="row clearfix">
-                <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 inner-column">
-                    <div class="single-item-carousel owl-carousel owl-theme dots-style-one owl-nav-none">
-                        <div class="testimonial-block-two">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="icon-18"></i></div>
-                                <div class="text">
-                                    <h3>“Our goal each day is to ensure that our res- idents’ needs are not only met but exceeded To make that happen we are committed to providing an environment.”</h3>
-                                </div>
-                                <div class="author-info">
-                                    <figure class="author-thumb"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
-                                    <h4>Rebeka Dawson</h4>
-                                    <span class="designation">Instructor</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-block-two">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="icon-18"></i></div>
-                                <div class="text">
-                                    <h3>“Our goal each day is to ensure that our res- idents’ needs are not only met but exceeded To make that happen we are committed to providing an environment.”</h3>
-                                </div>
-                                <div class="author-info">
-                                    <figure class="author-thumb"><img src="assets/images/resource/testimonial-2.jpg" alt=""></figure>
-                                    <h4>Marc Kenneth</h4>
-                                    <span class="designation">Founder CEO</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-block-two">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="icon-18"></i></div>
-                                <div class="text">
-                                    <h3>“Our goal each day is to ensure that our res- idents’ needs are not only met but exceeded To make that happen we are committed to providing an environment.”</h3>
-                                </div>
-                                <div class="author-info">
-                                    <figure class="author-thumb"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
-                                    <h4>Owen Lester</h4>
-                                    <span class="designation">Manager</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- testimonial-style-two end -->
+   <x-testimonials-widget />
 
 
     <!-- place-style-two -->
@@ -942,42 +892,7 @@
     <!-- place-style-two end -->
 
 
-    <!-- clients-section -->
-    <section class="clients-section bg-color-1">
-        <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-1.png);"></div>
-        <div class="auto-container">
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-12 col-sm-12 title-column">
-                    <div class="sec-title">
-                        <h5>Our Partners</h5>
-                        <h2>We work with great partners.</h2>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
-                    <div class="clients-logo">
-                        <ul class="logo-list clearfix">
-                            <li>
-                                <figure class="logo"><a href="#"><img src="assets/images/clients/clients-1.png" alt=""></a></figure>
-                            </li>
-                            <li>
-                                <figure class="logo"><a href="#"><img src="assets/images/clients/clients-2.png" alt=""></a></figure>
-                            </li>
-                            <li>
-                                <figure class="logo"><a href="#"><img src="assets/images/clients/clients-3.png" alt=""></a></figure>
-                            </li>
-                            <li>
-                                <figure class="logo"><a href="#"><img src="assets/images/clients/clients-4.png" alt=""></a></figure>
-                            </li>
-                            <li>
-                                <figure class="logo"><a href="#"><img src="assets/images/clients/clients-5.png" alt=""></a></figure>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- clients-section end -->
+   <x-partners-widget />
 
 
     <!-- news-section -->

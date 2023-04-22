@@ -56,47 +56,27 @@
         </div>
         <div class="sidebar-widget category-widget">
             <div class="widget-title">
-                <h4>Category</h4>
+                <h4>Categories</h4>
             </div>
             <div class="widget-content">
                 <ul class="category-list clearfix">
-                    <li><a href="blog-details.html">Home improvement<span>(9)</span></a></li>
-                    <li><a href="blog-details.html">Architecture<span>(5)</span></a></li>
-                    <li><a href="blog-details.html">Tips and advice<span>(2)</span></a></li>
-                    <li><a href="blog-details.html">Interior<span>(7)</span></a></li>
-                    <li><a href="blog-details.html">Real Estate<span>(3)</span></a></li>
+                    @php
+
+                    $categories=\BinshopsBlog\Models\BinshopsCategory::all();
+                    // Get Category Details    
+                    @endphp
+
+                    @foreach ($categories as $category)
+                        @php
+                            $cat=\BinshopsBlog\Models\BinshopsCategoryTranslation::find($category->id);    
+                            $cat_count=DB::table('binshops_post_categories')->where('category_id', $category->id)->count();
+                        @endphp
+                            <li><a href="#">{{$cat->category_name}}<span>({{$cat_count}})</span></a></li>
+                    @endforeach
+                    
                 </ul>
             </div>
         </div>
-        {{-- <div class="sidebar-widget category-widget">
-            <div class="widget-title">
-                <h4>Archives</h4>
-            </div>
-            <div class="widget-content">
-                <ul class="category-list clearfix">
-                    <li><a href="blog-details.html">November 2016<span>(9)</span></a></li>
-                    <li><a href="blog-details.html">November 2017<span>(5)</span></a></li>
-                    <li><a href="blog-details.html">November 2018<span>(2)</span></a></li>
-                    <li><a href="blog-details.html">November 2019<span>(7)</span></a></li>
-                    <li><a href="blog-details.html">November 2020<span>(3)</span></a></li>
-                </ul>
-            </div>
-        </div> --}}
-        {{-- <div class="sidebar-widget tags-widget">
-            <div class="widget-title">
-                <h4>Popular Tags</h4>
-            </div>
-            <div class="widget-content">
-                <ul class="tags-list clearfix">
-                    <li><a href="blog-details.html">Real Estate</a></li>
-                    <li><a href="blog-details.html">HouseHunting</a></li>
-                    <li><a href="blog-details.html">Architecture</a></li>
-                    <li><a href="blog-details.html">Interior</a></li>
-                    <li><a href="blog-details.html">Sale</a></li>
-                    <li><a href="blog-details.html">Rent Home</a></li>
-                    <li><a href="blog-details.html">Listing</a></li>
-                </ul>
-            </div>
-        </div> --}}
+        
     </div>
 </div>
