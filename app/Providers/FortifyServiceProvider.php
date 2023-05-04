@@ -19,7 +19,7 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        Fortify::ignoreRoutes();
     }
 
     /**
@@ -41,5 +41,39 @@ class FortifyServiceProvider extends ServiceProvider
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
+
+        //Custom Views 
+
+        Fortify::loginView(function (){
+            return view('backend.login');
+        });
+
+        Fortify::twoFactorChallengeView(function () {
+            return view('backend.two-factor');
+        });
+
+        Fortify::registerView(function () {
+            return view('backend.register');
+        });
+
+        Fortify::requestPasswordResetLinkView(function () {
+            return view('frontend.auth.forgot-password');
+        });
+
+        Fortify::resetPasswordView(function ($request) {
+            return view('backend.password-reset', ['request' => $request]);
+        });
+
+        Fortify::verifyEmailView(function () {
+            return view('backend.email-verification');
+        });
+
+        Fortify::confirmPasswordView(function () {
+            return view('backend.password-comfirmation');
+        });
+     
+
+
+
     }
 }

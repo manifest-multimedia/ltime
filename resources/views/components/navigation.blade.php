@@ -30,10 +30,10 @@
 <div class="menu-right-content clearfix">
     @if (\Request::route()->getName()==="home")
         <div class="sign-box">
-            <a href="#register"><i class="fas fa-user"></i>Sign In</a>
+            <a href="{{url('login')}}"><i class="fas fa-user"></i>Sign In</a>
         </div>
     @endif
-    <div class="btn-box">
-        <a href="#affiliate" class="theme-btn btn-one"><span>+</span>Become an Affiliate</a>
+    <div class="sign-box mr-2 ml-3">
+        <a href="{{url('register')}}" class="theme-btn btn-one"><span>+</span>Become an Affiliate</a>
     </div>
 </div>
