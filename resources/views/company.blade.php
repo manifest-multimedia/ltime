@@ -1,6 +1,6 @@
 <x-page-layout title="L-time Properties | About Us" pagetitle="Company"> 
 <!-- about-section -->
-<section class="about-section about-page pb-0">
+{{-- <section class="about-section about-page pb-0">
     <div class="auto-container">
         <div class="inner-container">
             <div class="row align-items-center clearfix">
@@ -310,7 +310,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- clients-section end -->
 
 
