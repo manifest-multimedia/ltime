@@ -11,18 +11,18 @@
                 <li class="{{ url()->current() === url('/') ? 'current' : ''}}"><a href="/"><span>Home</span></a>
                    
                 </li>
-                <li class="{{ url()->current() === url('/our-company') ? 'current' : ''}}"><a href="/our-company"><span>Company</span></a>
+                <li class="{{ url()->current() === url('/our-company') ? 'current' : ''}}"><a href="/our-company"><span>About Us</span></a>
                    
                 </li> 
                 <li class="{{ url()->current() === url('/our-services') ? 'current' : ''}}"><a href="/our-services"><span>Services</span></a> </li> 
                     
                 
-                <li class="{{ url()->current() === url('/our-projects') ? 'current' : ''}}"><a href="/our-projects"><span>Projects</span></a>
+                <li class="{{ url()->current() === url('/our-projects') ? 'current' : ''}}"><a href="/our-projects"><span>Properties</span></a>
                     
                 </li> 
                 <li class="{{ url()->current() === url('/en/insights') ? 'current' : ''}}"><a href="/en/insights"><span>Insights</span></a></li>
                 
-                <li class="{{ url()->current() === url('/contact-us') ? 'current' : ''}}"><a href="/contact-us"><span>Contact</span></a></li>   
+                <li class="{{ url()->current() === url('/contact-us') ? 'current' : ''}}"><a href="/contact-us"><span>Contact Us</span></a></li>   
             </ul>
         </div>
     </nav>

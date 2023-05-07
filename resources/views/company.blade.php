@@ -1,15 +1,15 @@
 <x-page-layout title="L-time Properties | About Us" pagetitle="Company"> 
 <!-- about-section -->
-{{-- <section class="about-section about-page pb-0">
+ <section class="about-section about-page pb-0">
     <div class="auto-container">
         <div class="inner-container">
             <div class="row align-items-center clearfix">
                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                     <div class="image_block_2">
                         <div class="image-box">
-                            <figure class="image"><img src="assets/images/resource/about-1.jpg" alt=""></figure>
+                            <figure class="image"><img src="{{asset('assets/images/about-thumb.jpg')}}" alt="About Us"></figure>
                             <div class="text wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                <h2>20</h2>
+                                <h2>14+</h2>
                                 <h4>Years of <br />Experience</h4>
                             </div>
                         </div>
@@ -19,19 +19,19 @@
                     <div class="content_block_3">
                         <div class="content-box">
                             <div class="sec-title">
-                                <h5>About</h5>
-                                <h2>Hi, I’m Jessica Blake</h2>
+                                <h5>About L-Time Properties</h5>
+                               <h2> Who We Are</h2>
                             </div>
                             <div class="text">
-                                <p>Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris aliquip ex ea commodo consequat duis aute irure.</p>
-                                <p>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.</p>
+                                <p>Ltime Properties is a full-service real estate company that specializes in property management, development, and brokerage services. We were established in 2010 and have since grown to become a leading real estate firm in the industry. Our team comprises experienced professionals who are dedicated to providing unparalleled services to our clients.</p>
+                                <p>We offer a wide range of real estate services that are tailored to meet our clients' unique needs. Whether you are looking to buy, sell, rent, or develop properties, we have the expertise, resources, and network to make it happen. Our services include property management, real estate brokerage, property development, and consulting. With us, you can expect nothing but the best.</p>
                             </div>
-                            <ul class="list clearfix">
+                            {{-- <ul class="list clearfix">
                                 <li>consectetur elit sed do eius</li>
                                 <li>consectetur elit sed</li>
-                            </ul>
+                            </ul> --}}
                             <div class="btn-box">
-                                <a href="contact.html" class="theme-btn btn-one">Contact With Me</a>
+                                <a href="{{url('contact-us')}}" class="theme-btn btn-one">Contact With Me</a>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
 </section>
 <!-- about-section end -->
 
-
+{{--
 <!-- feature-style-three -->
 <section class="feature-style-three centred pb-110">
     <div class="auto-container">
