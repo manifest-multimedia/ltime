@@ -99,7 +99,7 @@
 </div>
 
 
-<!-- jequery plugins -->
+<!-- jquery plugins -->
 <script src="{{asset("assets/js/jquery.js")}}"></script>
 <script src="{{asset("assets/js/popper.min.js")}}"></script>
 <script src="{{asset("assets/js/bootstrap.min.js")}}"></script>
@@ -115,6 +115,7 @@
 <script src="{{asset("assets/js/jquery-ui.js")}}"></script>
 <script src="{{asset("assets/js/jquery.paroller.min.js")}}"></script>
 <script src="{{asset("assets/js/nav-tool.js")}}"></script>
+<script src="{{asset("assets/js/product-filter.js")}}"> </script>
 
 <!-- map script -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM_4EWUyvbxHuDXEowPuxPsbCF3J7mINI"></script>

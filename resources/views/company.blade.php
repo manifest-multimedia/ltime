@@ -31,7 +31,7 @@
                                 <li>consectetur elit sed</li>
                             </ul> --}}
                             <div class="btn-box">
-                                <a href="{{url('contact-us')}}" class="theme-btn btn-one">Contact With Me</a>
+                                <a href="{{url('our-services')}}" class="theme-btn btn-one">Our Services</a>
                             </div>
                         </div>
                     </div>
@@ -41,104 +41,49 @@
     </div>
 </section>
 <!-- about-section end -->
-
-{{--
-<!-- feature-style-three -->
-<section class="feature-style-three centred pb-110">
+<!-- testimonial-style-four -->
+<section class="testimonial-style-four sec-pad centred">
     <div class="auto-container">
         <div class="sec-title">
-            <h5>Our Services</h5>
-            <h2>Property Services</h2>
+            <h5>A Clear Vision & Mission</h5>
+            <h2>Vision & Mission Statement</h2>
+            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmod tempor incididunt <br />labore dolore magna aliqua enim.</p> --}}
         </div>
-        <div class="three-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-1"></i></div>
-                    <h4>Excellent Reputation</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-26"></i></div>
-                    <h4>Best Local Agents</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-21"></i></div>
-                    <h4>Personalized Service</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-1"></i></div>
-                    <h4>Excellent Reputation</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-26"></i></div>
-                    <h4>Best Local Agents</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-21"></i></div>
-                    <h4>Personalized Service</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-1"></i></div>
-                    <h4>Excellent Reputation</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-26"></i></div>
-                    <h4>Best Local Agents</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-21"></i></div>
-                    <h4>Personalized Service</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
+        <div class="row">
+            
+        <div class="col-md-6">
+            <h3 class="pb-30" style="padding-bottom:30px"> <strong> Our Vision </strong></h3>
+            <div class="inner-box">
+                <div class="icon-box"><i class="icon-18"></i></div>
+
+                <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
+                {{-- <h5>Rebeka Dawson</h5> --}}
+                
             </div>
         </div>
+        <div class="col-md-6">
+            <h3 class="pb-30" style="padding-bottom:30px"><strong> Our Mission </strong></h3>
+            <div class="inner-box">
+                <div class="icon-box"><i class="icon-18"></i></div>
+                <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
+                {{-- <h5>Rebeka Dawson</h5> --}}
+                {{-- <span class="designation">Instructor</span> --}}
+            </div>
+        </div>
+
+        </div>
+        
     </div>
 </section>
-<!-- feature-style-three end -->
+<!-- testimonial-style-four end -->
 
 
-<!-- cta-section -->
-<section class="cta-section alternate-2 pb-240 centred" style="background-image: url(assets/images/background/cta-1.jpg);">
-    <div class="auto-container">
-        <div class="inner-box clearfix">
-            <div class="text">
-                <h2>Looking to Buy a New Property or <br />Sell an Existing One?</h2>
-            </div>
-            <div class="btn-box">
-                <a href="property-details.html" class="theme-btn btn-three">Rent Properties</a>
-                <a href="index.html" class="theme-btn btn-one">Buy Properties</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- cta-section end -->
+<x-partners-widget />
 
 
 <!-- funfact-section -->
-<section class="funfact-section centred">
+{{-- <section class="funfact-section centred" >
+    <h3> Numbers Don't Lie</h3>
     <div class="auto-container">
         <div class="inner-container wow slideInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
             <div class="row clearfix">
@@ -185,139 +130,33 @@
             </div>
         </div>
     </div>
-</section>
-<!-- funfact-section end -->
-
-
-<!-- testimonial-style-four -->
-<section class="testimonial-style-four sec-pad centred">
-    <div class="auto-container">
-        <div class="sec-title">
-            <h5>Testimonials</h5>
-            <h2>What They Say About Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmod tempor incididunt <br />labore dolore magna aliqua enim.</p>
-        </div>
-        <div class="three-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Rebeka Dawson</h5>
-                    <span class="designation">Instructor</span>
-                </div>
-            </div>
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Marc Kenneth</h5>
-                    <span class="designation">Founder CEO</span>
-                </div>
-            </div>
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Owen Lester</h5>
-                    <span class="designation">Manager</span>
-                </div>
-            </div>
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Rebeka Dawson</h5>
-                    <span class="designation">Instructor</span>
-                </div>
-            </div>
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Marc Kenneth</h5>
-                    <span class="designation">Founder CEO</span>
-                </div>
-            </div>
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Owen Lester</h5>
-                    <span class="designation">Manager</span>
-                </div>
-            </div>
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Rebeka Dawson</h5>
-                    <span class="designation">Instructor</span>
-                </div>
-            </div>
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Marc Kenneth</h5>
-                    <span class="designation">Founder CEO</span>
-                </div>
-            </div>
-            <div class="testimonial-block-three">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-18"></i></div>
-                    <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
-                    <h5>Owen Lester</h5>
-                    <span class="designation">Manager</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- testimonial-style-four end -->
-
-
-<!-- clients-section -->
-<section class="clients-section bg-color-1">
-    <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-1.png);"></div>
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-4 col-md-12 col-sm-12 title-column">
-                <div class="sec-title">
-                    <h5>Our Pertners</h5>
-                    <h2>We’re going to Became Partners for the Long Run.</h2>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
-                <div class="clients-logo">
-                    <ul class="logo-list clearfix">
-                        <li>
-                            <figure class="logo"><a href="index-2.html"><img src="assets/images/clients/clients-1.png" alt=""></a></figure>
-                        </li>
-                        <li>
-                            <figure class="logo"><a href="index-2.html"><img src="assets/images/clients/clients-2.png" alt=""></a></figure>
-                        </li>
-                        <li>
-                            <figure class="logo"><a href="index-2.html"><img src="assets/images/clients/clients-3.png" alt=""></a></figure>
-                        </li>
-                        <li>
-                            <figure class="logo"><a href="index-2.html"><img src="assets/images/clients/clients-4.png" alt=""></a></figure>
-                        </li>
-                        <li>
-                            <figure class="logo"><a href="index-2.html"><img src="assets/images/clients/clients-5.png" alt=""></a></figure>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 </section> --}}
-<!-- clients-section end -->
+
+ <!-- cta-section -->
+ <section class="cta-section alternate-2 centred" style="background-image: url({{asset('assets/images/banner/banner-1920x505.jpg')}});">
+    <div class="auto-container">
+        <div class="inner-box clearfix">
+            <div class="text">
+                <h2>Looking to Develop a New Property?</h2>
+            </div>
+            <div class="btn-box">
+                <a href="#" class="theme-btn btn-three">Build with Us</a>
+                <a href="#" class="theme-btn btn-one">Buy Properties</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- cta-section end -->
+
+
+
+
 
 
 {{-- <x-team-widget /> --}}
 
-
-{{-- <!-- download-section -->
+{{--
+ <!-- download-section -->
 <section class="download-section bg-color-3">
     <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-3.png);"></div>
     <div class="auto-container">
