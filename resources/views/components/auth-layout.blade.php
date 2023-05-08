@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>{{ isset($pagetitle) ? $pagetitle : 'L-Time Properties' }}</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
-    <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
-    <script src="assets/js/loader.js"></script>
+    <link href="{{asset("assets/backend/assets/css/loader.css")}}" rel="stylesheet" type="text/css" />
+    <script src="{{asset("assets/backend/assets/js/loader.js")}}"></script>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
     <link href="{{asset('assets/backend/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -33,23 +33,35 @@
                 <div class="form-container">
                     <div class="form-content">
 
-                        <h1 class=""> {{$page === "Login" ? "Log In to" : "Create an account on" }} <a href="{{url('login')}}"><span class="brand-name">{{__('L-Time Properties')}}</span></a></h1>
+                        <h1 class=""> {{$page === "Login" ? "Log In" : "Create an account" }} <a href="{{url('login')}}">
+                            {{-- <span class="brand-name">{{__('L-Time Properties')}}</span> --}}
+                        </a></h1>
                         @if($page==="Login")
                             <p class="signup-link">New Here? <a href="{{url('register')}}">Create an account</a></p>
                         @else 
                         <p class="signup-link">Already have an account? <a href="{{url('login')}}">Login</a></p>
                         @endif
-                        <form class="text-left">
+                        {{-- <form class="text-left"> --}}
                            {{$slot}}
-                        </form>                        
+                        {{-- </form>                         --}}
                         <p class="terms-conditions">© {{date('Y')}} All Rights Reserved. <a href="{{url('/')}}">L-Time Properties</a> . <a href="javascript:void(0);">Cookie Preferences</a>, <a href="javascript:void(0);">Privacy</a>, and <a href="javascript:void(0);">Terms</a>.</p>
 
                     </div>                    
                 </div>
             </div>
         </div>
+
+        <style>
+            .form-image .l-image{
+                background:url(assets/images/about-thumb.jpg) !important;
+                object-fit:cover !important;
+                background-size: 100% !important;
+            }
+        </style>
         <div class="form-image">
+            
             <div class="l-image">
+
             </div>
         </div>
     </div>
@@ -61,7 +73,7 @@
     <script src="{{asset('assets/backend/bootstrap/js/bootstrap.min.js')}}"></script>
     
     <!-- END GLOBAL MANDATORY SCRIPTS -->
-    <script src="assets/js/authentication/form-1.js"></script>
+    <script src="{{asset("assets/backend/assets/js/authentication/form-1.js")}}"></script>
     <script>
         var loaderElement = document.querySelector('#load_screen');
         setTimeout( function() {
