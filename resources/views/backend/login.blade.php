@@ -1,4 +1,4 @@
-<x-auth-layout page="Login"> 
+<x-auth-layout page="Login" pagetitle="Sign In | L-Time Properties"> 
 
     <x-validation-errors class="mb-4" />
 
