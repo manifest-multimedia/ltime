@@ -56,7 +56,7 @@
             <div class="inner-box">
                 <div class="icon-box"><i class="icon-18"></i></div>
 
-                <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
+                <h4>“At Ltime Properties, our vision is to transform the real estate industry by providing innovative and sustainable solutions that exceed our clients' expectations and positively impact the communities we serve.”</h4>
                 {{-- <h5>Rebeka Dawson</h5> --}}
                 
             </div>
@@ -65,7 +65,7 @@
             <h3 class="pb-30" style="padding-bottom:30px"><strong> Our Mission </strong></h3>
             <div class="inner-box">
                 <div class="icon-box"><i class="icon-18"></i></div>
-                <h4>“Our goal each day is to ensure that our residents’ needs are not only met but exceeded.”</h4>
+                <h4>“Our mission is to create a real estate brand that is synonymous with quality, integrity, and excellence. We are committed to delivering exceptional real estate experiences and solutions that empower our clients to make informed decisions and achieve their goals.”</h4>
                 {{-- <h5>Rebeka Dawson</h5> --}}
                 {{-- <span class="designation">Instructor</span> --}}
             </div>
