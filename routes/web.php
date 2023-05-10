@@ -16,21 +16,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/dashboard', function(){
+    return redirect('/portal/dashboard');
+});
 
-Route::middleware(['referral', 'TrackReferrals'])->group(function () {
+
+Route::middleware(['referral'])->group(function () {
    
-    Route::get('/{?ref}', [HomeController::class ,'index'])->name('home');
+
+    Route::get('/', [HomeController::class ,'index'])->name('home');
     
-    Route::get('/our-company/{?ref}', function () {
+    Route::get('/our-company/{ref?}', function () {
         return view('company');
     });
-    Route::get('/our-services/{?ref}', function () {
+    Route::get('/our-services/{ref?}', function () {
         return view('services');
     });
 
-    Route::get('/properties/{?ref}', [PropertyController::class, 'index'])->name('properties');
+    Route::get('/properties/{ref?}', [PropertyController::class, 'index'])->name('properties');
 
-    Route::get('/contact-us/{?ref}', function () {
+    Route::get('/contact-us/{ref?}', function () {
         return view('contact');
     });
 
@@ -61,3 +66,5 @@ Route::prefix('portal')->middleware([
     Route::get('/settings', [SettingsController::class, 'index']);
 
 });
+
+

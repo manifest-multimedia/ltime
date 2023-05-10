@@ -27,7 +27,9 @@
         </div>
     </nav>
 </div>
-<div class="menu-right-content clearfix d-none d-sm-block">
+
+
+<div class="menu-right-content clearfix d-none d-sm-flex">
     @if (\Request::route()->getName()==="home")
         <div class="sign-box ">
             <a href="{{url('login')}}"><i class="fas fa-user"></i>Sign In</a>
@@ -40,7 +42,7 @@
 <div class="menu-right-content clearfix d-block d-sm-none">
     
     <div class="sign-box mr-2 ml-3">
-        <a href="{{url('properties')}}" class="theme-btn btn-one"><span></span>Properties</a>
+        <a href="{{url('properties')}}" class="theme-btn btn-one" style="top:4px !important;padding:8px 25px 8px 20px !important"><span></span>Our Properties</a>
     </div>
 
 </div>
