@@ -2,7 +2,7 @@
 
 namespace App\Helpers; 
 
-class Helper {
+class helper {
 
     public static function UpdateReferralCode($data) {
         
