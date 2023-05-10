@@ -21,21 +21,21 @@ Route::get('/dashboard', function(){
 });
 
 
-Route::middleware(['referral'])->group(function () {
+Route::middleware(['referral', 'TrackReferrals'])->group(function () {
    
 
     Route::get('/', [HomeController::class ,'index'])->name('home');
     
-    Route::get('/our-company/{ref?}', function () {
+    Route::get('/our-company', function () {
         return view('company');
     });
-    Route::get('/our-services/{ref?}', function () {
+    Route::get('/our-services', function () {
         return view('services');
     });
 
-    Route::get('/properties/{ref?}', [PropertyController::class, 'index'])->name('properties');
+    Route::get('/properties', [PropertyController::class, 'index'])->name('properties');
 
-    Route::get('/contact-us/{ref?}', function () {
+    Route::get('/contact-us', function () {
         return view('contact');
     });
 
