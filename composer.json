@@ -12,9 +12,11 @@
         "laravel/jetstream": "*",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "livewire/livewire": "^2.11"
+        "livewire/livewire": "^2.11",
+        "questocat/laravel-referral": "^1.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.8",
         "deployer/deployer": "^7.3",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",

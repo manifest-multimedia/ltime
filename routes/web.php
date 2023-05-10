@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AffiliateController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
 use Illuminate\Support\Facades\Route;
@@ -15,22 +16,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class ,'index'])->name('home');
 
-Route::get('/our-company', function () {
-    return view('company');
+Route::middleware(['referral', 'TrackReferrals'])->group(function () {
+   
+    Route::get('/{?ref}', [HomeController::class ,'index'])->name('home');
+    
+    Route::get('/our-company/{?ref}', function () {
+        return view('company');
+    });
+    Route::get('/our-services/{?ref}', function () {
+        return view('services');
+    });
+
+    Route::get('/properties/{?ref}', [PropertyController::class, 'index'])->name('properties');
+
+    Route::get('/contact-us/{?ref}', function () {
+        return view('contact');
+    });
+
 });
-Route::get('/our-services', function () {
-    return view('services');
-});
 
-Route::get('/our-projects', [PropertyController::class, 'index'])->name('properties');
 
-Route::get('/contact-us', function () {
-    return view('contact');
-});
-
-Route::middleware([
+Route::prefix('portal')->middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
@@ -38,4 +45,19 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('backend.dashboard');
     })->name('dashboard');
+
+    Route::get('/affiliates', [AffiliateController::class, 'index']);
+
+    Route::get('/profile', [UserProfileController::class, 'index']);
+
+    Route::get('/users', [UserController::class, 'index']);
+
+    Route::get('/properties', [PropertyController::class, 'admin']);
+
+    Route::get('/partners', [PartnerController::class, 'index']);
+
+    Route::get('/testimonials', [TestimonialController::class, 'index']);
+
+    Route::get('/settings', [SettingsController::class, 'index']);
+
 });

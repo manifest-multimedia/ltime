@@ -320,6 +320,11 @@
                             <div class="media mx-auto">
                                 <div class="media-body">
                                     <h5>{{ Str::limit(Auth::user()->name, 15, '...') }}</h5>
+                                    <p>Affiliate ID: {{Auth::user()->affiliate_id}}</p>
+
+                                   
+                                   Referral Link: <a href="{{Auth::user()->getReferralLink()}}">{{Auth::user()->getReferralLink()}}</a> 
+
                                     @isset(Auth::user()->role)
                                         <p>{{Auth::user()->role}}</p>
                                     @endisset

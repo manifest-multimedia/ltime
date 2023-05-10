@@ -17,7 +17,7 @@
                 <li class="{{ url()->current() === url('/our-services') ? 'current' : ''}}"><a href="/our-services"><span>Services</span></a> </li> 
                     
                 
-                <li class="{{ url()->current() === url('/our-projects') ? 'current' : ''}}"><a href="/our-projects"><span>Properties</span></a>
+                <li class="{{ url()->current() === url('/properties') ? 'current' : ''}}"><a href="/our-projects"><span>Properties</span></a>
                     
                 </li> 
                 <li class="{{ url()->current() === url('/en/insights') ? 'current' : ''}}"><a href="/en/insights"><span>Insights</span></a></li>
@@ -27,13 +27,20 @@
         </div>
     </nav>
 </div>
-<div class="menu-right-content clearfix">
+<div class="menu-right-content clearfix d-none d-sm-block">
     @if (\Request::route()->getName()==="home")
-        <div class="sign-box">
+        <div class="sign-box ">
             <a href="{{url('login')}}"><i class="fas fa-user"></i>Sign In</a>
         </div>
     @endif
     <div class="sign-box mr-2 ml-3">
         <a href="{{url('register')}}" class="theme-btn btn-one"><span>+</span>Become an Affiliate</a>
     </div>
+</div>
+<div class="menu-right-content clearfix d-block d-sm-none">
+    
+    <div class="sign-box mr-2 ml-3">
+        <a href="{{url('properties')}}" class="theme-btn btn-one"><span></span>Properties</a>
+    </div>
+
 </div>

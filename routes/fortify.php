@@ -20,7 +20,7 @@ use Laravel\Fortify\Http\Controllers\TwoFactorQrCodeController;
 use Laravel\Fortify\Http\Controllers\TwoFactorSecretKeyController;
 use Laravel\Fortify\Http\Controllers\VerifyEmailController;
 
-Route::group(['middleware' => config('fortify.middleware', ['web'])], function () {
+Route::group(['middleware' => config('fortify.middleware', ['web']), 'referral'], function () {
     $enableViews = config('fortify.views', true);
 
     // Authentication...
@@ -68,12 +68,12 @@ Route::group(['middleware' => config('fortify.middleware', ['web'])], function (
     if (Features::enabled(Features::registration())) {
         if ($enableViews) {
             Route::get('/register', [RegisteredUserController::class, 'create'])
-                ->middleware(['guest:'.config('fortify.guard')])
+                ->middleware(['guest:'.config('fortify.guard'), 'referral'])
                 ->name('register');
         }
 
         Route::post('/register', [RegisteredUserController::class, 'store'])
-            ->middleware(['guest:'.config('fortify.guard')]);
+            ->middleware(['guest:'.config('fortify.guard'), 'referral']);
     }
 
     // Email Verification...

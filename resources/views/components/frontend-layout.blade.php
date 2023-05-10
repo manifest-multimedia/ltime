@@ -133,7 +133,7 @@
                             </nav>
                         </div>
                         <div class="btn-box">
-                            <a href="#" class="theme-btn btn-one"><span>+</span>Become an Affiliate</a>
+                            <a href="{{url('register')}}" class="theme-btn btn-one"><span>+</span>Become an Affiliate</a>
                         </div>
                     </div>
                 </div>

@@ -7,11 +7,13 @@ use App\Models\Location;
 use App\Models\Property;
 use BinshopsBlog\Models\BinshopsPost;
 use BinshopsBlog\Models\BinshopsPostTranslation;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function index() 
+    public function index(Request $request) 
         {   
+                      
             $posts= BinshopsPost::where('is_published', true)->limit(3)->get();
 
             $locations=Location::where('status', 'enabled')->get();
