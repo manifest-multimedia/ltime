@@ -74,6 +74,7 @@
                                 
                             </li>
 
+                            @can('Admin')
                             <li class="menu single-menu">
                                 <a href="{{url('#Settings')}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <div class="">
@@ -85,6 +86,8 @@
                                 </a>
                                
                             </li>
+                            @endcan
+                            
                             
                             <li class="menu single-menu">
                                 <a href="{{url('manage-referrals')}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -109,29 +112,31 @@
                                 </a>
                               
                             </li> --}}
-
-                            <li class="menu single-menu">
-                                <a href="#managecontent" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <div class="">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                            @can("Admin")
+                                <li class="menu single-menu">
+                                    <a href="#managecontent" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                        <div class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                                            
+                                            <span>Manage Content</span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                    </a>
+                                    <ul class="collapse submenu list-unstyled animated fadeInUp" id="managecontent"  data-parent="#topAccordion">
+                                        <li>
+                                            <a href="{{url('#Properties')}}"> Properties </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url("#Testimonials")}}"> Testimonials </a>
+                                        </li>
                                         
-                                        <span>Manage Content</span>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                                </a>
-                                <ul class="collapse submenu list-unstyled animated fadeInUp" id="managecontent"  data-parent="#topAccordion">
-                                    <li>
-                                        <a href="{{url('#Properties')}}"> Properties </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{url("#Testimonials")}}"> Testimonials </a>
-                                    </li>
-                                    
-                                    <li>
-                                        <a href="{{url('manage-insights')}}"> Insights </a>
-                                    </li>
-                                </ul>
-                            </li>
+                                        <li>
+                                            <a href="{{url('manage-insights')}}"> Insights </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @endcan
+                            
 
                             {{-- <li class="menu single-menu menu-extras">
                                 <a href="#more" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">

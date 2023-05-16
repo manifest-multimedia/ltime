@@ -1,5 +1,5 @@
 <x-backend-layout> 
-
+@can('Affiliate')
 <div id="content" class="main-content">
     <div class="layout-px-spacing">
 
@@ -25,7 +25,7 @@
             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                 <div class="widget widget-table-two">
 
-                   @livewire('recent-orders-table')
+                   @livewire('recent-affiliate-activity-table')
 
                 </div>
             </div>
@@ -34,7 +34,7 @@
             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                 <div class="widget widget-table-three">
 
-                   @livewire('top-affiliates-table')
+                   @livewire('affiliate-referrals-table')
 
                 </div>
             </div>
@@ -492,7 +492,9 @@
             
 
         </div>
-
-       
-
-</x-backend-layout>
+@endcan
+   
+    
+           
+    
+    </x-backend-layout>
