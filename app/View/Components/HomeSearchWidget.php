@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\Property;
 
 class HomeSearchWidget extends Component
 {
@@ -15,10 +16,15 @@ class HomeSearchWidget extends Component
 
     public $locations; 
 
+    public $propertyTypes;
+
     public function __construct($properties, $locations)
     {
         $this->properties=$properties;
         $this->locations=$locations; 
+
+        $this->propertyTypes= Property::distinct('type')->pluck('type');
+
     }
 
     /**
