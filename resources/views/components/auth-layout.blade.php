@@ -44,7 +44,7 @@
                         {{-- <form class="text-left"> --}}
                            {{$slot}}
                         {{-- </form>                         --}}
-                        <p class="terms-conditions">© {{date('Y')}} All Rights Reserved. <a href="{{url('/')}}">L-Time Properties</a> . <a href="javascript:void(0);">Cookie Preferences</a>, <a href="javascript:void(0);">Privacy</a>, and <a href="javascript:void(0);">Terms</a>.</p>
+                        <p class="terms-conditions">© {{date('Y')}} All Rights Reserved. <a href="{{url('privacy')}}">Privacy</a> and <a href="{{url('terms')}}">Terms</a>.</p>
 
                     </div>                    
                 </div>
@@ -53,7 +53,7 @@
 
         <style>
             .form-image .l-image{
-                background:url(assets/images/about-thumb.jpg) !important;
+                background:url({{asset("assets/images/about-thumb.jpg")}}) !important;
                 object-fit:cover !important;
                 background-size: 100% !important;
             }

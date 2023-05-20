@@ -14,7 +14,7 @@
                         <div class="tab active-tab" id="tab-1">
                             <div class="inner-box">
                                 <div class="top-search">
-                                    <form action="index.html" method="post" class="search-form">
+                                    <form action="" method="post" class="search-form">
                                         <div class="row clearfix">
                                             <div class="col-lg-4 col-md-12 col-sm-12 column">
                                                 <div class="form-group">
@@ -67,7 +67,7 @@
                         <div class="tab" id="tab-2">
                             <div class="inner-box">
                                 <div class="top-search">
-                                    <form action="index.html" method="post" class="search-form">
+                                    <form action="" method="post" class="search-form">
                                         <div class="row clearfix">
                                             <div class="col-lg-4 col-md-12 col-sm-12 column">
                                                 <div class="form-group">

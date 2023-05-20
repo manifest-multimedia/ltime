@@ -47,9 +47,9 @@
             </div>
 
             <div class="field-wrapper">
-                @if (Route::has('password.request'))
+                {{-- @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}" class="forgot-pass-link">{{__("Forgot Password?")}}</a>
-                @endif
+                @endif --}}
             </div>
         </form>
     </div>
