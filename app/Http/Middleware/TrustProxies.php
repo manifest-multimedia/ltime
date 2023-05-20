@@ -34,13 +34,13 @@ class TrustProxies extends Middleware
      * @param  Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
-    {
-        // Force HTTPS
-        if (!$request->secure()) {
-            return redirect()->secure($request->getRequestUri());
-        }
+    // public function handle($request, Closure $next)
+    // {
+    //     // Force HTTPS
+    //     if (!$request->secure()) {
+    //         return redirect()->secure($request->getRequestUri());
+    //     }
 
-        return parent::handle($request, $next);
-    }
+    //     return parent::handle($request, $next);
+    // }
 }
