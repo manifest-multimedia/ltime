@@ -2,8 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Http\Middleware\TrustProxies as Middleware;
+use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Http\Middleware\TrustProxies as Middleware;
 
 class TrustProxies extends Middleware
 {
@@ -25,4 +26,21 @@ class TrustProxies extends Middleware
         Request::HEADER_X_FORWARDED_PORT |
         Request::HEADER_X_FORWARDED_PROTO |
         Request::HEADER_X_FORWARDED_AWS_ELB;
+
+    /**
+     * Handle the incoming request.
+     *
+     * @param  Request  $request
+     * @param  Closure  $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
+    {
+        // Force HTTPS
+        if (!$request->secure()) {
+            return redirect()->secure($request->getRequestUri());
+        }
+
+        return parent::handle($request, $next);
+    }
 }
