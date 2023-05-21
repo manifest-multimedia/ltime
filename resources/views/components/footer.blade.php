@@ -76,13 +76,13 @@
     <div class="footer-bottom">
         <div class="auto-container">
             <div class="inner-box clearfix">
-                <figure class="footer-logo"><a href="#"><img src="{{asset("assets/images/footer-logo.png")}}" alt="logo" style="height:93px"></a></figure>
+                <figure class="footer-logo"><a href="{{url("/")}}"><img src="{{asset("assets/images/footer-logo.png")}}" alt="logo" style="height:93px"></a></figure>
                 <div class="copyright pull-left">
-                    <p><a href="#">L-Time Properties</a> &copy; {{date('Y')}}. All Right Reserved</p>
+                    <p><a href="{{url("/")}}">L-Time Properties</a> &copy; {{date('Y')}}. All Right Reserved</p>
                 </div>
                 <ul class="footer-nav pull-right clearfix">
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="{{url('terms')}}">Terms of Service</a></li>
+                    <li><a href="{{url('privacy')}}">Privacy Policy</a></li>
                 </ul>
             </div>
         </div>
