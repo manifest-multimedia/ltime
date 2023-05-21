@@ -175,12 +175,9 @@
             </div>
         </div>
     </section>
-    <!-- chooseus-section end -->
 
    <x-testimonials-widget />
 
-
-    <!-- place-style-two -->
     <section class="place-style-two sec-pad">
         <div class="auto-container">
             <div class="row clearfix">
@@ -215,9 +212,7 @@
             </div>
         </div>
     </section>
-    <!-- place-style-two end -->
-
-
+    
    <x-partners-widget />
 
 

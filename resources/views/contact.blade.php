@@ -1,21 +1,5 @@
 <x-page-layout title="L-time Properties | Contact Us"> 
 
-    {{-- <!--Page Title-->
-    <section class="page-title centred" style="background-image: url(assets/images/background/page-title.jpg);">
-        <div class="auto-container">
-            <div class="content-box clearfix">
-                <h1>Contact Us</h1>
-                <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--End Page Title--> --}}
-
-
-    <!-- contact-info-section -->
     <section class="contact-info-section sec-pad centred">
         <div class="auto-container">
             <div class="sec-title">
@@ -56,11 +40,8 @@
             </div>
         </div>
     </section>
-    <!-- contact-info-section end -->
-
-
-    <!-- contact-section -->
-    <section class="contact-section bg-color-1">
+  
+    <section class="contact-section bg-color-1" id="message">
         <div class="auto-container">
             <div class="row align-items-center clearfix">
                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -69,30 +50,7 @@
                             <h5>Contact</h5>
                             <h2>Contact Us</h2>
                         </div>
-                        <div class="form-inner">
-                            <form method="post" action="sendemail.php" id="contact-form"> 
-                                <div class="row clearfix">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <input type="text" name="username" placeholder="Your Name" required="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <input type="email" name="email" placeholder="Email address" required="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <input type="text" name="phone" placeholder="Phone" required="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <input type="text" name="subject" placeholder="Subject" required="">
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <textarea name="message" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                        <button class="theme-btn btn-one" type="submit" name="submit-form">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        @livewire('contact-form-widget')
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 map-column">
@@ -116,6 +74,6 @@
             </div>
         </div>
     </section>
-    <!-- contact-section end -->
+
 
 </x-page-layout>

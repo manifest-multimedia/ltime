@@ -11,22 +11,15 @@
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
                 <div class="clients-logo">
+                    
                     <ul class="logo-list clearfix">
+                        @foreach (\App\Models\Partner::get() as $item)
                         <li>
-                            <figure class="logo"><a href="#"><img src="{{asset('assets/images/partners/access-bank.jpg')}}" alt=""></a></figure>
+                            <figure class="logo"><a href="$item->website"><img src="{{asset($item->logo)}}" alt="{{$item->company}}"></a></figure>
                         </li>
-                        <li>
-                           <figure class="logo"><a href="#"><img src="{{asset("assets/images/partners/barclays.jpg")}}" alt=""></a></figure>
-                        </li>
-                        {{--  <li>
-                            <figure class="logo"><a href="#"><img src="assets/images/clients/clients-3.png" alt=""></a></figure>
-                        </li>
-                        <li>
-                            <figure class="logo"><a href="#"><img src="assets/images/clients/clients-4.png" alt=""></a></figure>
-                        </li>
-                        <li>
-                            <figure class="logo"><a href="#"><img src="assets/images/clients/clients-5.png" alt=""></a></figure> --}}
-                        </li>
+                        @endforeach
+                        
+                      
                     </ul>
                 </div>
             </div>
