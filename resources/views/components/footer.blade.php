@@ -124,6 +124,7 @@
 
 <!-- main-js -->
 <script src="{{asset("assets/js/script.js")}}"></script>
-
+    @stack('scripts')
+    @livewireScripts()
 </body><!-- End of .page_wrapper -->
 </html>

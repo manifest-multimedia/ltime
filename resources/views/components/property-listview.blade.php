@@ -1,9 +1,11 @@
 <div class="deals-list-content list-item">
     @foreach ($properties as $item)
+
+    
     <div class="deals-block-one">
         <div class="inner-box">
             <div class="image-box">
-                <figure class="image"><img src="assets/images/resource/deals-3.jpg" alt="featured-image"></figure>
+                <figure class="image"><img style="width:300px; height:350px;object-fit:cover" src="{{$item->featured_image}}" alt="featured-image"></figure>
                 <div class="batch"><i class="icon-11"></i></div>
                 @if($item->featured)
                     <span class="category">Featured</span>
@@ -24,12 +26,20 @@
                         </figure>
                     </div> --}}
                 </div>
+                @if($item->type=='land')
+                <p>{{$item->description}}</p>
+                <ul class="more-details clearfix">
+              
+                    <li><i class="icon-16"></i>Land Size: {{$item->squareft}} Sq Ft</li>
+                </ul>
+                @elseif ($item->type=='property')
                 <p>{{$item->description}}</p>
                 <ul class="more-details clearfix">
                     <li><i class="icon-14"></i>{{$item->beds}} Beds</li>
                     <li><i class="icon-15"></i>{{$item->baths}} Baths</li>
                     <li><i class="icon-16"></i>{{$item->squareft}} Sq Ft</li>
                 </ul>
+                @endif
                 <div class="other-info-box clearfix">
                     <div class="btn-box pull-left"><a href="#{{$item->id}}" class="theme-btn btn-two">Buy Now</a></div>
                     {{-- <ul class="other-option pull-right clearfix">
