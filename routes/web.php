@@ -43,7 +43,7 @@ Route::middleware(['referral', 'TrackReferrals'])->group(function () {
     });
 
     Route::post('/search', [SearchController::class, 'search'])->name('search');
-
+    Route::get('/search', [SearchController::class, 'sortPropertyByType']);
   
     Route::post('/affiliate-signup', [PartnerController::class, 'signup'])->name('affiliate.signup');
 

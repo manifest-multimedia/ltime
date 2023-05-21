@@ -19,7 +19,7 @@
                             </div>
                             <div class="right-column pull-right clearfix">
                                 <div class="short-box clearfix">
-                                    <div class="select-box">
+                                    <div class="select-box" wire:ignore>
                                         <select class="wide">
                                            <option data-display="Sort by: Newest">Sort by: Newest</option>
                                            <option value="1">High to Low</option>

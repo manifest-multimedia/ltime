@@ -196,7 +196,7 @@
                                 
                             </ul>
                             <div class="btn-box">
-                                <a href="categories.html" class="theme-btn btn-one">View All Places</a>
+                                <a href="{{url('search?type=land')}}" class="theme-btn btn-one">View All Places</a>
                             </div>
                         </div>
                     </div>

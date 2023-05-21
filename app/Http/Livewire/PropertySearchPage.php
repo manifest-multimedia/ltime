@@ -15,6 +15,7 @@ class PropertySearchPage extends Component
     public $highestprice; 
     public $query;
     public $results; 
+    public $filter=[];
 
     protected $listeners = ['priceFilterChanged'];
 
@@ -42,7 +43,11 @@ class PropertySearchPage extends Component
 
         switch ($this->query) {
             case 'all':
-                $this->properties=Property::all();
+                if($this->filter!=null){
+                    $this->properties=$this->filter;
+                }else {
+                    $this->properties=Property::all();
+                }
                 break;
             case 'empty':
                 $this->properties=[];
@@ -50,14 +55,20 @@ class PropertySearchPage extends Component
                 $this->properties=$this->results;
                 break;
         }
-      
+       
         return view('livewire.property-search-page', compact('propertyTypes'));
     }
 
     public function priceFilterChanged($value)
     {
         $this->price_filter = explode(" - ", $value);
-
+   
+        $minPrice=$this->price_filter[0];
+        $maxPrice=$this->price_filter[1];
+ 
+        $this->filter=Property::whereBetween('price', [$minPrice, $maxPrice])->get();
         
     }
+
+   
 }

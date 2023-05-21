@@ -65,7 +65,7 @@
             <h3 class="pb-30" style="padding-bottom:30px"><strong> Our Mission </strong></h3>
             <div class="inner-box">
                 <div class="icon-box"><i class="icon-18"></i></div>
-                <h4>“Our mission is to create a real estate brand that is synonymous with quality, integrity, and excellence. We are committed to delivering exceptional real estate experiences and solutions that empower our clients to make informed decisions and achieve their goals.”</h4>
+                <h4>“Our mission is to create a real estate brand that is synonymous with quality, integrity, and excellence. We are committed to delivering exceptional experiences and solutions that empower our clients to make informed decisions and excel.”</h4>
                 {{-- <h5>Rebeka Dawson</h5> --}}
                 {{-- <span class="designation">Instructor</span> --}}
             </div>

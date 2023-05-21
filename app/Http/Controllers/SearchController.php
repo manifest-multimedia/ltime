@@ -32,5 +32,14 @@ class SearchController extends Controller
 
     }
 
+    public function sortPropertyByType(Request $request){
+       
+        $results=Property::where('type', $request->type)->get(); 
+        $query="search"; 
+
+        return view('projects', compact('query', 'results'));
+      
+    }
+
    
 }

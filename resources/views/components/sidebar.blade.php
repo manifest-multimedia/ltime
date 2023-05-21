@@ -6,7 +6,7 @@
             <div class="widget-title">
                 <h5>Property</h5>
             </div>
-            <div class="widget-content">
+            <div class="widget-content" wire:ignore>
                 <div class="select-box">
                     <select class="wide">
                        <option data-display="Property Type">Select Property Type</option>
