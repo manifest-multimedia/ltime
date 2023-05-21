@@ -20,12 +20,12 @@
                         </div>
                         <div class="widget-content">
                             <ul class="links-list class">
-                                <li><a href="#">{{__("Land Sales")}}</a></li>
-                                <li><a href="#">{{__("Real Estate")}}</a></li>
-                                <li><a href="#">{{__("Construction Works")}}</a></li>
-                                <li><a href="#">{{__("Consultancy")}}</a></li>
-                                <li><a href="#">{{__("Design")}}</a></li>
-                                <li><a href="#">{{__("Surveying")}}</a></li>
+                                <li><a href="{{url('our-services')}}">{{__("Land Sales")}}</a></li>
+                                <li><a href="{{url('our-services')}}">{{__("Real Estate")}}</a></li>
+                                <li><a href="{{url('our-services')}}">{{__("Construction Works")}}</a></li>
+                                <li><a href="{{url('our-services')}}">{{__("Consultancy")}}</a></li>
+                                <li><a href="{{url('our-services')}}">{{__("Design")}}</a></li>
+                                <li><a href="{{url('our-services')}}">{{__("Surveying")}}</a></li>
                             </ul>
                         </div>
                     </div>

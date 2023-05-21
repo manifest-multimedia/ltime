@@ -7,7 +7,7 @@
     <section class="feature-style-two sec-pad">
         <div class="auto-container">
             <div class="sec-title">
-                <h5>Features</h5>
+                <h5>Featured</h5>
                 <h2>Featured Property</h2>
             </div>
             <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
@@ -213,7 +213,9 @@
         </div>
     </section>
     
-   <x-partners-widget />
+    @if(\App\Models\Partner::count()>0)
+        <x-partners-widget />
+    @endif 
 
 
    <x-home-news-widget />
