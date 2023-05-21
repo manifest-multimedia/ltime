@@ -13,7 +13,7 @@
                     <div class="property-content-side">
                         <div class="item-shorting clearfix">
                             <div class="left-column pull-left">
-                                <h5>Search Lands & Properties: {{$query}}  
+                                <h5>Search Lands & Properties:  
                                     {{-- <span>Showing 1-5 of 20 Properties</span> --}}
                                 </h5>
                             </div>
