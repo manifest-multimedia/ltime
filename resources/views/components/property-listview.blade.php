@@ -41,11 +41,8 @@
                 </ul>
                 @endif
                 <div class="other-info-box clearfix">
-                    <div class="btn-box pull-left"><a href="#{{$item->id}}" class="theme-btn btn-two">Buy Now</a></div>
-                    {{-- <ul class="other-option pull-right clearfix">
-                        <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                        <li><a href="property-details.html"><i class="icon-13"></i></a></li>
-                    </ul> --}}
+                    <div class="btn-box pull-left"><a href="{{url("p/$item->id")}}" class="theme-btn btn-two">Buy Now</a></div>
+                    
                 </div>
             </div>
         </div>

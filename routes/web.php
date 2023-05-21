@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AffiliateController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UserController;
@@ -36,12 +37,15 @@ Route::middleware(['referral', 'TrackReferrals'])->group(function () {
     });
 
     Route::get('/properties', [PropertyController::class, 'index'])->name('properties');
-
+    Route::get('/p/{id}', [PropertyController::class, 'show']);
     Route::get('/contact-us', function () {
         return view('contact');
     });
 
     Route::post('/search', [SearchController::class, 'search'])->name('search');
+
+  
+    Route::post('/affiliate-signup', [PartnerController::class, 'signup'])->name('affiliate.signup');
 
 });
 

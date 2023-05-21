@@ -14,17 +14,14 @@ class SearchController extends Controller
         $property_type=$request->property_type;
         $search_type = $request->search_type;
 
-        // dd($search);
-
         $results = Property::where('type', $search_type)
-    ->where(function ($query) use ($search) {
-        $query->where('title', 'like', '%' . $search . '%')
-            ->orWhere('property_type', 'like', '%' . $search . '%')
-            ->orWhere('description', 'like', '%' . $search . '%');
-    })
-    ->get();
-
-    
+            ->where(function ($query) use ($search) {
+                $query->where('title', 'like', '%' . $search . '%')
+                    ->orWhere('property_type', 'like', '%' . $search . '%')
+                    ->orWhere('description', 'like', '%' . $search . '%');
+            })
+        ->get();
+        
         if($results->count()>0){
             $query="search";
             return view('projects', compact('query', 'results'));

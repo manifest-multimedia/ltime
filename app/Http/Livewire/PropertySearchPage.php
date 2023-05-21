@@ -24,7 +24,7 @@ class PropertySearchPage extends Component
         if (isset($results)) {
             $this->results = $results;
         }
-        // $this->results=$results;
+        
         $this->highestprice=Property::max('price');
         $this->locations=Location::all();
        

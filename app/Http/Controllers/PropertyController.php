@@ -12,4 +12,12 @@ class PropertyController extends Controller
         return view('projects', compact('query'));
 
     }
+
+    public function show(Request $request){
+        
+         $property=Property::where('id',$request->id)->first();
+        // dd($property->title);
+        return view('property-details', compact('property'));
+
+    }
 }
