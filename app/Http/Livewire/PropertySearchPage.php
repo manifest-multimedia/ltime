@@ -33,13 +33,6 @@ class PropertySearchPage extends Component
     public function render()
     {
         $propertyTypes= Property::distinct('type')->pluck('type');
-      
-        if($this->query==='all'){
-          
-        }else{
-            
-           
-        }
 
         switch ($this->query) {
             case 'all':
