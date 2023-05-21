@@ -145,9 +145,9 @@
 
        {{$slot}}
 
-        <!-- subscribe-section -->
+        
             <x-sitewide-cta />
-        <!-- subscribe-section end -->
+        
 
     <!-- main-footer -->
     <x-footer /> 

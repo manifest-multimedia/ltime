@@ -10,7 +10,7 @@ class PartnerController extends Controller
     {
         $email = $request->email;
 
-        dd($email);
+        return redirect('register')->withInput(['email'=>$email]);
         
     }
 }
