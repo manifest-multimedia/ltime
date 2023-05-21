@@ -2,11 +2,8 @@
 
     <x-slider />
 
-
     <x-home-search-widget :properties="$properties" :locations="$locations"/>
 
-
-    <!-- feature-style-two -->
     <section class="feature-style-two sec-pad">
         <div class="auto-container">
             <div class="sec-title">
@@ -23,13 +20,7 @@
                                 <span class="category">Featured</span>
                             </div>
                             <div class="lower-content">
-                                {{-- <div class="author-info clearfix">
-                                    <div class="author pull-left">
-                                        <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
-                                        <h6>Michael Bean</h6>
-                                    </div>
-                                    <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
-                                </div> --}}
+                               
                                 <div class="title-text mt-3"><h4><a href="#">{{$item->title}}</a></h4></div>
                                 <div class="price-box clearfix">
                                     <div class="price-info pull-left">
@@ -47,7 +38,7 @@
                                     <li><i class="icon-15"></i>{{$item->baths}} Baths</li>
                                     <li><i class="icon-16"></i>{{$item->squareft}} Sq Ft</li>
                                 </ul>
-                                <div class="btn-box"><a href="#" class="theme-btn btn-two">See Details</a></div>
+                                <div class="btn-box"><a href="{{url("p/$item->id")}}" class="theme-btn btn-two">See Details</a></div>
                             </div>
                         </div>
                     </div>
@@ -55,10 +46,9 @@
                 
                
             </div>
-            <div class="more-btn centred"><a href="#" class="theme-btn btn-one">View All Properties</a></div>
+            <div class="more-btn centred"><a href="{{url('properties')}}" class="theme-btn btn-one">View All Properties</a></div>
         </div>
     </section>
-    <!-- feature-style-two end -->
 
 
     <!-- cta-section -->
@@ -69,8 +59,8 @@
                     <h2>Looking to Develop a New Property?</h2>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="theme-btn btn-three">Build with Us</a>
-                    <a href="#" class="theme-btn btn-one">Buy Properties</a>
+                    <a href="{{url('contact-us#message')}}" class="theme-btn btn-three">Build with Us</a>
+                    <a href="{{url('properties')}}" class="theme-btn btn-one">Buy Properties</a>
                 </div>
             </div>
         </div>
@@ -78,7 +68,6 @@
     <!-- cta-section end -->
 
 
-    <!-- deals-style-two -->
     <section class="deals-style-two sec-pad">
         <div class="auto-container">
             <div class="sec-title centred">
@@ -135,148 +124,10 @@
                 </div>
                 @endforeach
                
-                {{-- <div class="single-item">
-                    <div class="row clearfix">
-                        <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/resource/deals-2.jpg" alt=""></figure>
-                                <div class="batch"><i class="icon-11"></i></div>
-                                <span class="category">Featured</span>
-                                <div class="buy-btn"><a href="property-details.html">For Buy</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
-                            <div class="deals-block-one">
-                                <div class="inner-box">
-                                    <div class="lower-content">
-                                        <div class="title-text"><h4><a href="property-details.html">Luxury Villa With Pool</a></h4></div>
-                                        <div class="price-box clearfix">
-                                            <div class="price-info pull-left">
-                                                <h6>Start From</h6>
-                                                <h4>$40,000.00</h4>
-                                            </div>
-                                            <div class="author-box pull-right">
-                                                <figure class="author-thumb"> 
-                                                    <img src="assets/images/feature/author-2.jpg" alt="">
-                                                    <span>Robert Niro</span>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing sed eiusm do tempor incididunt labore.</p>
-                                        <ul class="more-details clearfix">
-                                            <li><i class="icon-14"></i>3 Beds</li>
-                                            <li><i class="icon-15"></i>2 Baths</li>
-                                            <li><i class="icon-16"></i>600 Sq Ft</li>
-                                        </ul>
-                                        <div class="other-info-box clearfix">
-                                            <div class="btn-box pull-left"><a href="property-details.html" class="theme-btn btn-one">See Details</a></div>
-                                            <ul class="other-option pull-right clearfix">
-                                                <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                                                <li><a href="property-details.html"><i class="icon-13"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-                {{-- <div class="single-item">
-                    <div class="row clearfix">
-                        <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/resource/deals-2.jpg" alt=""></figure>
-                                <div class="batch"><i class="icon-11"></i></div>
-                                <span class="category">Featured</span>
-                                <div class="buy-btn"><a href="property-details.html">For Buy</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
-                            <div class="deals-block-one">
-                                <div class="inner-box">
-                                    <div class="lower-content">
-                                        <div class="title-text"><h4><a href="property-details.html">Contemporary Apartment</a></h4></div>
-                                        <div class="price-box clearfix">
-                                            <div class="price-info pull-left">
-                                                <h6>Start From</h6>
-                                                <h4>$50,000.00</h4>
-                                            </div>
-                                            <div class="author-box pull-right">
-                                                <figure class="author-thumb"> 
-                                                    <img src="assets/images/feature/author-3.jpg" alt="">
-                                                    <span>Keira Mel</span>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing sed eiusm do tempor incididunt labore.</p>
-                                        <ul class="more-details clearfix">
-                                            <li><i class="icon-14"></i>3 Beds</li>
-                                            <li><i class="icon-15"></i>2 Baths</li>
-                                            <li><i class="icon-16"></i>600 Sq Ft</li>
-                                        </ul>
-                                        <div class="other-info-box clearfix">
-                                            <div class="btn-box pull-left"><a href="property-details.html" class="theme-btn btn-one">See Details</a></div>
-                                            <ul class="other-option pull-right clearfix">
-                                                <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                                                <li><a href="property-details.html"><i class="icon-13"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-                {{-- <div class="single-item">
-                    <div class="row clearfix">
-                        <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/resource/deals-2.jpg" alt=""></figure>
-                                <div class="batch"><i class="icon-11"></i></div>
-                                <span class="category">Featured</span>
-                                <div class="buy-btn"><a href="property-details.html">For Buy</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
-                            <div class="deals-block-one">
-                                <div class="inner-box">
-                                    <div class="lower-content">
-                                        <div class="title-text"><h4><a href="property-details.html">Villa on Grand Avenue</a></h4></div>
-                                        <div class="price-box clearfix">
-                                            <div class="price-info pull-left">
-                                                <h6>Start From</h6>
-                                                <h4>$30,000.00</h4>
-                                            </div>
-                                            <div class="author-box pull-right">
-                                                <figure class="author-thumb"> 
-                                                    <img src="assets/images/feature/author-1.jpg" alt="">
-                                                    <span>Michael Bean</span>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing sed eiusm do tempor incididunt labore.</p>
-                                        <ul class="more-details clearfix">
-                                            <li><i class="icon-14"></i>3 Beds</li>
-                                            <li><i class="icon-15"></i>2 Baths</li>
-                                            <li><i class="icon-16"></i>600 Sq Ft</li>
-                                        </ul>
-                                        <div class="other-info-box clearfix">
-                                            <div class="btn-box pull-left"><a href="property-details.html" class="theme-btn btn-one">See Details</a></div>
-                                            <ul class="other-option pull-right clearfix">
-                                                <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                                                <li><a href="property-details.html"><i class="icon-13"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+               
             </div>
         </div>
     </section>
-    <!-- deals-style-two end -->
 
 
     <!-- chooseus-section -->
@@ -326,75 +177,6 @@
     </section>
     <!-- chooseus-section end -->
 
-
-    {{-- <!-- team-section -->
-    <section class="team-section sec-pad centred">
-        <div class="auto-container">
-            <div class="sec-title">
-                <h5>Our Agents</h5>
-                <h2>Meet Our Excellent Agents</h2>
-            </div>
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12 team-block">
-                    <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/team/team-6.jpg" alt=""></figure>
-                            <div class="lower-content">
-                                <div class="inner">
-                                    <h4><a href="agents-details.html">Jennifer Lawrence</a></h4>
-                                    <span class="designation">Senior Agent</span>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 team-block">
-                    <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/team/team-7.jpg" alt=""></figure>
-                            <div class="lower-content">
-                                <div class="inner">
-                                    <h4><a href="agents-details.html">Benedict Cumberbatch</a></h4>
-                                    <span class="designation">Senior Agent</span>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 team-block">
-                    <div class="team-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/team/team-8.jpg" alt=""></figure>
-                            <div class="lower-content">
-                                <div class="inner">
-                                    <h4><a href="agents-details.html">Elizabeth Winstead</a></h4>
-                                    <span class="designation">Senior Agent</span>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- team-section end --> --}}
-
-
    <x-testimonials-widget />
 
 
@@ -411,11 +193,10 @@
                                 <p>Our Registered Lands are for sale in these top locations. We transform communities around our sites!</p>
                             </div>
                             <ul class="place-list clearfix">
-                                <li><a href="categories.html"><h5>Prampram</h5><span>(02)</span></a></li>
-                                <li><a href="categories.html"><h5>Dawa</h5><span>(13)</span></a></li>
-                                <li><a href="categories.html"><h5>Agotor-Tsopoli</h5><span>(05)</span></a></li>
-                                {{-- <li><a href="categories.html"><h5>Brazil</h5><span>(04)</span></a></li>
-                                <li><a href="categories.html"><h5>California</h5><span>(07)</span></a></li> --}}
+                                @foreach ($locations as $location)
+                                <li><a href="{{url("search?location=$location->id")}}"><h5>{{$location->title}}</h5><span>()</span></a></li>
+                                @endforeach
+                                
                             </ul>
                             <div class="btn-box">
                                 <a href="categories.html" class="theme-btn btn-one">View All Places</a>
