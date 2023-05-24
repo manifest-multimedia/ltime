@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Contact;
 
 class ContactFormWidget extends Component
 {
@@ -33,7 +34,27 @@ class ContactFormWidget extends Component
         ];
 
         $this->validate($rules,$messages);
+        
+        $saveContact=new Contact; 
+        $saveContact->from_name=$this->contactName;
+        $saveContact->from_email=$this->contactEmail;
+        $saveContact->from_phone=$this->contactPhone;
+        $saveContact->subject=$this->contactSubject;
+        $saveContact->message_body=$this->contactMessage;
+        $saveContact->type="message";
+        $saveContact->read_status=false; 
+        $saveContact->save();
 
+        session()->flash('MessageSent', "Thanks for contacting us $this->contactName. We have received your message. Please allow a few moments for us to respond.");
+        $this->resetValues();
+    }
+
+    public function resetValues(){
+        $this->contactName="";
+        $this->contactEmail="";
+        $this->contactPhone="";
+        $this->contactSubject="";
+        $this->contactMessage="";
     }
 
 }
