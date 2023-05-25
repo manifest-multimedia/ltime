@@ -54,6 +54,8 @@ Route::middleware(['referral', 'TrackReferrals'])->group(function () {
         return view('legal');
     });
 
+    
+
 });
 
 
