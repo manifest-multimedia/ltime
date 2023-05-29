@@ -13,4 +13,8 @@ class PartnerController extends Controller
         return redirect('register')->withInput(['email'=>$email]);
         
     }
+
+    public function index(){
+        
+    }
 }

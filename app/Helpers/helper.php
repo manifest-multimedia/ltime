@@ -41,4 +41,26 @@ class helper {
         }
     }
 
+    public static function getUserFirstName($name){
+        $nameParts = explode(' ', $name);
+        return $nameParts[0] ?? '';
+    }
+
+    public static function getUserLastName($name){
+        $nameParts = explode(' ', $name);
+        return end($nameParts) ?? '';
+    }
+
+    public static function getUserOtherName($name){
+
+        $nameParts = explode(' ', $name);
+        $otherNames = '';
+    
+        if (count($nameParts) > 3) {
+            $otherNames = implode(' ', array_slice($nameParts, 1, -1));
+        }
+    
+        return $otherNames;
+    }
+
 }
