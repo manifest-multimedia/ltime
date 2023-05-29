@@ -48,6 +48,8 @@ class helper {
 
     public static function getUserLastName($name){
         $nameParts = explode(' ', $name);
+
+        // dd("From $name, the users's last name is ".end($nameParts));
         return end($nameParts) ?? '';
     }
 
@@ -55,15 +57,12 @@ class helper {
 
         $nameParts = explode(' ', $name);
         $otherNames = '';
-
-    if (count($nameParts) === 3) {
-        $otherNames = $nameParts[1]; // Return full other name
-    } elseif (count($nameParts) > 4) {
-        $initials = array_slice($nameParts, 1, -1);
-        $otherNames = implode('. ', $initials) . '.'; // Return initials for other names
-    }
-
-    return $otherNames;
+    
+        if (count($nameParts) >= 3) {
+            $otherNames = implode(' ', array_slice($nameParts, 1, -1)); // Return other names in full
+        }
+    
+        return $otherNames;
     }
 
 }

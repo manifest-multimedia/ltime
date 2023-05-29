@@ -36,18 +36,21 @@
                         <label for="profile-photo">Profile Photo</label>
                     </div> --}}
                    <div class="col-md-12 mt-3">
-                        {{-- <hr> --}}
+                        
                         Role: {{ ucfirst(Auth::user()->role) }}
                         <br />
                         Affiliate ID: {{ ucfirst(Auth::user()->affiliate_id) }}
                         <div class="text-center">
                             <a class="btn btn-primary mt-3" id="copyButton" wire:click="copyRefLink('{{ Auth::user()->getReferralLink() }}')">Copy Referral Link</a>
-                        @if($successMessage!='')
-                        <div class="alert alert-success mt-3" role="alert" wire:loading.remove>
-                            {{ $successMessage }}
+                       <div class="poll" wire:poll>
+
+                            @if($showSuccessMessage)
+                                <div class="alert alert-success mt-3" role="alert">
+                                    Referral Link Copied!
+                                </div>
+                            @endif
                         </div>
-                        @endif
-                        </div>
+                       </div>
                    </div>
                 </div>
                 <div class="col-md-8">
@@ -111,29 +114,48 @@
 </div>
 
 @push('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 <script>
     document.addEventListener('livewire:load', function () {
+
         // Reload After Updating Profile
         Livewire.on('profileUpdated', function () {
             location.reload();
         });
 
-        //Copy Link to Clipboard
-        new ClipboardJS('#copyButton', {
-                text: function () {
-                    return @this.link;
-                }
-            }).on('success', function () {
-                // Success message or any additional logic after copying
-                @this.successMessage = 'Referral Link Copied!';
 
-                // Hide the success message after 3 seconds
-                setTimeout(function () {
-                    @this.successMessage = '';
-                }, 3000);
-            });
-    });
+        Livewire.on('copyToClipboard', function (link) {
+            // Copy the link to the clipboard
+            navigator.clipboard.writeText(link);
+            // Display a message to the user that the link has been copied
+            @this.showSuccessMessage = true;
+
+            setTimeout(function () {
+                        @this.showSuccessMessage = false;
+                    }, 3000);
+            
+        });
+
+        $('.dropify').dropify().on('dropify.beforeClear', function(event, element) {
+    // Remove the preview image
+    $(element).find('.dropify-preview img').remove();
+    
+    // Update the value of the input field
+    $(element).parent().siblings('input[type="hidden"]').val('');
+
+    // Emit the 'photoRemoved' event to the Livewire component
+    Livewire.emit('photoRemoved');
+});
+    
+
+    
+});
+        
+                
+   
 </script>
+
+
+
+
 @endpush
