@@ -22,6 +22,6 @@ class PropertyController extends Controller
     }
 
     public function admin(){
-        
+        return view('backend.properties');
     }
 }

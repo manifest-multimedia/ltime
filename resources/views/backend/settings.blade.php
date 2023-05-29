@@ -1,11 +1,11 @@
-<x-backend-layout> 
+<x-backend-layout>
 
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
     
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Referrals</h3>
+                    <h3>Settings</h3>
                 </div>
                 
                 <div class="toggle-switch">
@@ -16,31 +16,9 @@
                 </div>
             </div>
     
-            <div class="row layout-top-spacing">
-    
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                    <div class="widget widget-table-two">
-    
-                     
-    
-                    </div>
-                </div>
-                
-    
-                
-    
-              
-    
-                
-                
-    
-    
-           
-    
-                
-    
+            <div class="pt-2 pb-5">
+                {{-- @livewire('user-profile-component') --}}
             </div>
-    
-           
-    
-    </x-backend-layout>
+ 
+
+</x-backend-layout>

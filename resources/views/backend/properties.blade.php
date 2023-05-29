@@ -5,7 +5,7 @@
     
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Referrals</h3>
+                    <h3>Properties</h3>
                 </div>
                 
                 <div class="toggle-switch">
