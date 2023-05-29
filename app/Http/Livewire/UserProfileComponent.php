@@ -17,6 +17,8 @@ class UserProfileComponent extends Component
     public $lastName;
     public $otherName;
     public $email;   
+    public $link; 
+    public $successMessage = '';
 
     public function mount(){
         $this->firstName=helper::getUserFirstName(Auth::user()->name); 
@@ -31,6 +33,14 @@ class UserProfileComponent extends Component
         return view('livewire.user-profile-component');
     }
 
+    public function copyRefLink($link){
+
+    
+
+        $this->link = $link;
+        $this->dispatchBrowserEvent('copyToClipboard');
+
+    }
 
     public function saveProfile()
     {
@@ -64,7 +74,7 @@ class UserProfileComponent extends Component
                 //throw $th;
                 $user->profile_photo_path=null;
             }
-            
+
         } else {
             $user->profile_photo_path=null;
         }
