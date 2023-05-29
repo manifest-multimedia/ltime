@@ -9,7 +9,7 @@
                 </div>
                 
                 <div class="toggle-switch">
-                    <a href="{{url('/portal/profile')}}">You're logged in as Admin </a>
+                    <a href="{{url('/portal/profile')}}">You're logged in as {{ ucfirst(Auth::user()->role) }} </a>
                     <label class="switch s-icons s-outline  s-outline-secondary">
                      
                     </label>
