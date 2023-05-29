@@ -27,14 +27,12 @@
                         
                         <input wire:model="photo" type="file" id="photoInput" class="dropify"
                             data-default-file="{{ (Auth::user()->profile_photo_path) ? asset('storage/'.Auth::user()->profile_photo_path) : '' }}"
-                            data-allowed-file-extensions="jpg png gif">
+                            data-allowed-file-extensions="jpg JPG JPEG jpeg png gif">
                         <!-- Show uploading message when photo is being uploaded -->
-                        <div wire:loading wire:target="photo" class="text-muted">Uploading...</div>
+                        <div wire:loading wire:target="photo" class="text-muted mt-3">Uploading...</div>
                     </div>
 
-                    {{-- <div class="text-center mt-3">
-                        <label for="profile-photo">Profile Photo</label>
-                    </div> --}}
+                 
                    <div class="col-md-12 mt-3">
                         
                         Role: {{ ucfirst(Auth::user()->role) }}
