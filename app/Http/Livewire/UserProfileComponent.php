@@ -8,9 +8,12 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
+
 class UserProfileComponent extends Component
 {
     use WithFileUploads;
+
+      
 
     public $photo;
     public $oldPhoto;
@@ -20,13 +23,14 @@ class UserProfileComponent extends Component
     public $email;   
     public $link; 
     public $showSuccessMessage = '';
+    public $userSessions=[];
 
     protected $listeners = ['photoRemoved'];
 
     public function mount(){
 
-    
         
+
         $this->firstName=helper::getUserFirstName(Auth::user()->name); 
         $this->lastName=helper::getUserLastName(Auth::user()->name); 
         $this->otherName=helper::getUserOtherName(Auth::user()->name); 
@@ -35,6 +39,7 @@ class UserProfileComponent extends Component
         $this->oldPhoto=Auth::user()->profile_photo_path;
     }
 
+    
     public function render()
     {
         return view('livewire.user-profile-component');

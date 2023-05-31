@@ -66,7 +66,7 @@
                         <div class="media">
                             @if (Auth::check())
                             @if(Auth::user()->profile_photo_path)
-                            <img src="{{ (Auth::user()->profile_photo_path) ? asset('storage/'.Auth::user()->profile_photo_path) : '' }}" alt="{{ Auth::user()->name }}" >
+                            <img style="object-fit:cover; " src="{{ (Auth::user()->profile_photo_path) ? asset('storage/'.Auth::user()->profile_photo_path) : '' }}" alt="{{ Auth::user()->name }}" >
                             @else 
                             <div class="d-flex align-items-center justify-content-center rounded-circle text-white" style="width: 35px; height: 35px; font-size: 13px; background-color: #bfc9d4;">
                                 {{ strtoupper(substr(Auth::user()->name, 0, 2)) }}

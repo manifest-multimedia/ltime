@@ -12,6 +12,9 @@
                 <div class="col-md-4">
 
                     <style>
+                        .dropify-filename{
+                            display:none !important;
+                        }
                         .dropify-wrapper {
                             width: 200px;
                             height: 200px;
@@ -111,6 +114,28 @@
     </div>
 </div>
 
+<div class="card mx-auto mt-5" style="width: 800px">
+    <div class="card-header">
+        Active Sessions
+    </div>
+    <div class="card-body">
+
+
+
+        
+
+
+
+
+        @foreach ($userSessions as $session)
+            <p>Session ID: {{ $session->id }} </p> 
+            <p>IP Address {{ $session->ip_address }} </p> 
+            <p>User Agent {{ $session->user_agent}} </p> 
+        @endforeach
+    </div>
+</div>
+
+
 @push('scripts')
 
 <script>
@@ -135,17 +160,17 @@
         });
 
         $('.dropify').dropify().on('dropify.beforeClear', function(event, element) {
-    // Remove the preview image
-    $(element).find('.dropify-preview img').remove();
-    
-    // Update the value of the input field
-    $(element).parent().siblings('input[type="hidden"]').val('');
+        // Remove the preview image
+            $(element).find('.dropify-preview img').remove();
+            
+            // Update the value of the input field
+            $(element).parent().siblings('input[type="hidden"]').val('');
 
-    // Emit the 'photoRemoved' event to the Livewire component
-    Livewire.emit('photoRemoved');
-});
-    
-
+            // Emit the 'photoRemoved' event to the Livewire component
+            Livewire.emit('photoRemoved');
+        });
+        
+        
     
 });
         
