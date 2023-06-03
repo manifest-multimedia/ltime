@@ -5,7 +5,8 @@
     
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Properties</h3>
+                    <h3 class="float-left">Properties</h3>
+                    <button class="ml-5 btn btn-primary float-left" data-toggle="modal" data-target="#newProperty">+ Add New Property</button>
                 </div>
                 
                 <div class="toggle-switch">
@@ -24,23 +25,13 @@
                      
     
                     </div>
+
                 </div>
-                
-    
-                
-    
-              
-    
-                
-                
-    
-    
-           
     
                 
     
             </div>
     
-           
+           @livewire('new-property-modal')
     
     </x-backend-layout>
