@@ -31,9 +31,18 @@
 
 <div class="menu-right-content clearfix d-none d-sm-flex">
     @if (\Request::route()->getName()==="home")
+
         <div class="sign-box ">
-            <a href="{{url('login')}}"><i class="fas fa-user"></i>Sign In</a>
+            @auth
+                <a href="{{url('portal/dashboard')}}"><i class="fas fa-user"></i>My Account</a>
+
+            @else 
+
+                <a href="{{url('login')}}"><i class="fas fa-user"></i>Sign In</a>
+            @endauth
+
         </div>
+
     @endif
     <div class="sign-box mr-2 ml-3">
         <a href="{{url('register')}}" class="theme-btn btn-one"><span>+</span>Become an Affiliate</a>

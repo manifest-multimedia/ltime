@@ -97,7 +97,13 @@
                             <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
                         </ul> --}}
                         <div class="sign-box">
+                            @auth
+                            
+                            <a href="{{url('/portal/dashboard')}}"><i class="fas fa-user"></i>My Account</a>
+                            @else
+
                             <a href="{{url('login')}}"><i class="fas fa-user"></i>Sign In</a>
+                            @endauth
                         </div>
                     </div>
                 </div>
