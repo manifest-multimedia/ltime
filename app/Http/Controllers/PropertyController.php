@@ -22,6 +22,9 @@ class PropertyController extends Controller
     }
 
     public function admin(){
-        return view('backend.properties');
+        
+        $properties=Property::all();
+
+        return view('backend.properties', compact('properties'));
     }
 }

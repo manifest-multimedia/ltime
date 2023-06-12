@@ -5,7 +5,7 @@
                 <div class="feature-block-one">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><img src="{{$item->featured_image}}" alt="featured-image" style="width:370px; height:250px;object-fit:cover"></figure>
+                            <figure class="image"><img src="{{ ($item->featured_image) ? asset('storage/'.$item->featured_image) : asset('assets/backend/assets/img/400x300.jpg') }}" alt="{{ $item->title.' - featured_image' }}" style="width:370px; height:250px;object-fit:cover"></figure>
                             <div class="batch"><i class="icon-11"></i></div>
                             @if($item->featured)
                                 <span class="category">Featured</span>

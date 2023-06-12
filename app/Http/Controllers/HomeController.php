@@ -17,7 +17,7 @@ class HomeController extends Controller
             $posts= BinshopsPost::where('is_published', true)->limit(3)->get();
 
             $locations=Location::where('status', 'enabled')->get();
-            $properties=Property::where('featured', true)->where('type', 'Property')->get();
+            $properties=Property::where('type', 'property')->where('featured', true)->get();
             $system_currency="$";
             return view('home', compact(['locations', 'properties', 'system_currency', 'posts']));
         }

@@ -12,6 +12,7 @@
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
     <link href="{{asset('assets/backend/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/backend/assets/css/components/cards/card.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/backend/assets/css/plugins.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/backend/plugins/dropify/dropify.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
@@ -65,16 +66,16 @@
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="user-profile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media">
                             @if (Auth::check())
-                            @if(Auth::user()->profile_photo_path)
-                            <img style="object-fit:cover; " src="{{ (Auth::user()->profile_photo_path) ? asset('storage/'.Auth::user()->profile_photo_path) : '' }}" alt="{{ Auth::user()->name }}" >
-                            @else 
+                                @if(Auth::user()->profile_photo_path)
+                                    <img style="object-fit:cover; " src="{{ (Auth::user()->profile_photo_path) ? asset('storage/'.Auth::user()->profile_photo_path) : '' }}" alt="{{ Auth::user()->name }}" >
+                                @else 
                             <div class="d-flex align-items-center justify-content-center rounded-circle text-white" style="width: 35px; height: 35px; font-size: 13px; background-color: #bfc9d4;">
                                 {{ strtoupper(substr(Auth::user()->name, 0, 2)) }}
                             </div>
                             
                             @endif 
                         @endif
-                        {{-- <img src="assets/img/90x90.jpg" class="img-fluid" alt="admin-profile"> --}}
+                        
                         </div>
                     </a>
                     <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">

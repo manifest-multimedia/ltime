@@ -48,7 +48,7 @@
                                 @else 
                                 <li>Property Price: <span>${{$property->price}}</span></li>
                                 <li>Property Type: <span>{{$property->type}}</span></li>
-                                <li>Property Status: <span>{{ucFirst($property->status)}}</span></li>
+                                <li>Property Status: <span>{{($property->status) ? ucFirst($property->status) : ''}}</span></li>
                                 <li>Property Size: <span>{{$property->squareft}}Sq Ft</span></li>
                                 {{-- <li>Bathrooms: <span>03</span></li> --}}
                                 {{-- <li>Garage: <span>01</span></li> --}}

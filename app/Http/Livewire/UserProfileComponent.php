@@ -39,13 +39,10 @@ class UserProfileComponent extends Component
         $this->oldPhoto=Auth::user()->profile_photo_path;
     }
 
-    
     public function render()
     {
         return view('livewire.user-profile-component');
     }
-
-   
 
     public function copyRefLink($link){
 
@@ -57,13 +54,11 @@ class UserProfileComponent extends Component
     public function photoRemoved()
         {
 
-          
             $this->photo = null;
         }
 
     public function saveProfile()
     {
-
       
         $this->validate([
             'firstName' => 'required',
@@ -75,24 +70,20 @@ class UserProfileComponent extends Component
         $user = User::find(auth()->user()->id);
 
         if($this->otherName) {
-
             $user->name = "$this->firstName $this->otherName $this->lastName";
         } else{
-            
             $user->name = "$this->firstName $this->lastName";
         }
 
-       
         if ($this->photo!=$this->oldPhoto && $this->photo!=[] && $this->photo!='' && $this->photo!=null) {
             // dd("$this->photo Not equal to old photo $this->oldPhoto");
             try {
               // Store the uploaded photo and update the profile_photo_path
           $path=$this->photo->store('profile-photos', 'public');
 
-                $user->profile_photo_path =$path;  // Adjust the storage path as needed
+                $user->profile_photo_path =$path;
             
             } catch (\Throwable $th) {
-                //throw $th;
                 $user->profile_photo_path=null;
             }
 
