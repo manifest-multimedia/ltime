@@ -89,4 +89,8 @@ class NewPropertyModal extends Component
         $this->cover_photo='';
 
     }
+
+    public function delete($model,$id){
+        
+    }
 }
