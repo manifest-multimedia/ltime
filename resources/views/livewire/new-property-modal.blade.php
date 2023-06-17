@@ -21,9 +21,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="newPropertyModalLabel">New Property</h5>
-                    {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <svg> ... </svg>
-                    </button> --}}
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
                 </div>
                 <div class="modal-body ">
                     <p class="modal-text">Add New Property Listing </p>

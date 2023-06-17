@@ -17,42 +17,34 @@
                 </div>
             </div>
   
-            <div class="card ">
+            <div class="card">
                 <div class="card-body">
-                    <div class="row mx-auto ">
+                    <div class="row mx-auto">
                         @foreach ($properties as $property)
-                            
-                        <div class="col-md-4 mt-5 mb-5">
-                            <div class="card component-card_9">
-                                <img src="{{ ($property->featured_image) ? asset('storage/'.$property->featured_image) : asset('assets/backend/assets/img/400x300.jpg') }}" class="card-img-top" alt="{{ $property->title.' - featured_image' }}" style="height:300px; object-fit:cover">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $property->title }}</h5>
-                                    <p class="card-text">{{ $property->description }}</p>
-                    
-                                    <div class="meta-info">
-                                        <div class="meta-user">
-                                            <button class="btn btn-primary mr-1 ml-1">Edit</button>
-                                            <a href="/p/{{ $property->id }}" class="btn btn-primary mr-1 ml-1">View on Website</a>
-                                            {{-- <button class="btn btn-danger mr-1 ml-1">Delete</button> --}}
-                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" wire:click="$set('model', 'property')" wire:click="$set('itemID', $property->id)">Delete Property</button>
-                                           
+                            <div class="col-md-4 mt-5 mb-5">
+                                <div class="card component-card_9">
+                                    <img src="{{ ($property->featured_image) ? asset('storage/'.$property->featured_image) : asset('assets/backend/assets/img/400x300.jpg') }}" class="card-img-top" alt="{{ $property->title.' - featured_image' }}" style="height:300px; object-fit:cover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $property->title }}</h5>
+                                        <p class="card-text">{{ $property->description }}</p>
+            
+                                        <div class="meta-info">
+                                            <div class="meta-user">
+                                                <button class="btn btn-primary mr-1 ml-1">Edit</button>
+                                                <a href="/p/{{ $property->id }}" class="btn btn-primary mr-1 ml-1">View on Website</a>
+                                                <button class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal-{{ $property->id }}">Delete Property</button>
+                                            </div>
                                         </div>
-                    
-                                        
-                    
                                     </div>
-                    
-                                </div>
-                            </div> 
-                        </div>
-
-                        
-    
+                                </div> 
+                            </div>
+                          <livewire:delete-confirmation-modal :itemID="$property->id" modelName="property" />
                         @endforeach
-                       
                     </div>
                 </div>
             </div>
+            
+            
     
                 
     
@@ -60,5 +52,7 @@
 
          
            @livewire('new-property-modal')
-           <livewire:delete-confirmation-modal :model="$property->type" :itemID="$property->id" />
+           
+       
+
     </x-backend-layout>
