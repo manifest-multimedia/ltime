@@ -30,7 +30,7 @@
             
                                         <div class="meta-info">
                                             <div class="meta-user">
-                                                <button class="btn btn-primary mr-1 ml-1">Edit</button>
+                                                <a href="/portal/properties/e/{{ $property->id }}" class="btn btn-primary mr-1 ml-1" >Edit Property</a>
                                                 <a href="/p/{{ $property->id }}" class="btn btn-primary mr-1 ml-1">View on Website</a>
                                                 <button class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal-{{ $property->id }}">Delete Property</button>
                                             </div>

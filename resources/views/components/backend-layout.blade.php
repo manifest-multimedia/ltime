@@ -151,12 +151,7 @@
     <script src="{{asset('assets/backend/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/backend/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
     <script src="{{asset('assets/backend/assets/js/app.js')}}"></script>
-    {{-- <script>
-        $(document).ready(function() {
-            
-            
-        });
-    </script> --}}
+ 
     <script src="{{asset('assets/backend/assets/js/custom.js')}}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
@@ -174,11 +169,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js" defer></script>
     @livewireScripts()
     @stack('scripts')
-    
-
-   
-
-    
     
 </body>
 </html>

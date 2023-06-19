@@ -76,10 +76,16 @@ Route::prefix('portal')->middleware([
     Route::get('/users', [UserController::class, 'index']);
 
     Route::get('/properties', [PropertyController::class, 'admin']);
+    
+    Route::get('/properties/e/{id}', [PropertyController::class, 'edit']);
 
     Route::get('/partners', [PartnerController::class, 'index']);
+    
+    Route::get('/partners/e/{id}', [PartnerController::class, 'edit']);
 
     Route::get('/testimonials', [TestimonialController::class, 'index']);
+    
+    Route::get('/testimonials/e/{id}', [TestimonialController::class, 'edit']);
 
     Route::get('/settings', [SettingsController::class, 'index']);
 

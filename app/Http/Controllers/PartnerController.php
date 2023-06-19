@@ -17,4 +17,9 @@ class PartnerController extends Controller
     public function index(){
         return view('backend.partners');
     }
+
+    public function edit(){
+        return view('backend.edit-partner');
+    }
+
 }

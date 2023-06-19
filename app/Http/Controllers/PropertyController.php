@@ -27,4 +27,12 @@ class PropertyController extends Controller
 
         return view('backend.properties', compact('properties'));
     }
+
+    public function edit($id){
+        
+        $property_id=$id; 
+
+        return view('backend.edit-property', compact('property_id'));
+
+    }
 }
