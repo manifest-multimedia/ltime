@@ -19,7 +19,15 @@ class UserSeeder extends Seeder
     {
         $referred_by=helper::UserReferral();
 
-        User::create([
+        User::firstOrCreate ([
+            'name' => 'Johnson Sebire', 
+            'email' => 'johnson@manifestghana.com',
+            'password' => Hash::make('p@$$wordGH13'), 
+            'role'=>'admin',
+            'referred_by'=>$referred_by,
+        ]);
+
+        User::firstOrCreate ([
             'name' => 'Emmanuel Ray', 
             'email' => 'apostleraylive@gmail.com',
             'password' => Hash::make('Ray@LTime233'), 
@@ -27,7 +35,7 @@ class UserSeeder extends Seeder
             'referred_by'=>$referred_by,
         ]);
 
-        User::create([
+        User::firstOrCreate ([
             'name' => 'Francis Agbeko', 
             'email' => 'francis@ltimepropertiesltd.com',
             'password' => Hash::make('Francis@LTime233'), 
